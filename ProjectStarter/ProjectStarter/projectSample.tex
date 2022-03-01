@@ -141,7 +141,7 @@
 
 \begin{document}
 
-\title{Unnamed Platformer Documentation\\ for UTM CSCI 352}
+\title{Unnamed Platformer\\ for UTM CSCI 352}
 %
 %
 
@@ -152,7 +152,7 @@
 
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-The project is a video game in the 2D platformer genre. The player is made to run through a single level that progressively gets more difficult with each clear. The intended target is people between 18 and 34 years of age, primarily those that stream games as live reactions mesh well with high difficulties.
+The project is a video game in the 2D platformer genre. The player is made to run through a level, and upon each successful completion, the level is changed to increase the difficulty. The intended target is people that play video games, primarily those that stream games as live reactions mesh well with high difficulties.
 \end{abstract}
 
 }
@@ -180,23 +180,23 @@ The targeted audience for this project is people in the 18-34 age group who play
 
 
 \subsection{Background}
-No particular background is needed to understand the concepts of our project. The most you would need to know is the concept of a video game.
+A 2D platformer is a game genre set on a 2D plane where the player controlled character must move and jump to avoid obstacles and reach the end.
 
-Blade and I decided to make a platforming game because of our love for games in general and our shared interest in platformers. Because of this, we feel we can properly create one.
+We decided to make a platforming game because of our love for games in general and our shared interest in platformers. Because of this, we feel we can properly create one.
 
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
 
 
 \subsection{Impacts}
-This project is not meant to impact the world in some way. The point of a game is to provide entertainment, which will only impact a portion of the population if it were to gain traction within the community. At the current time, there is no plan for some meaningful story in the game, so the impact will be purely driven by the quality of the gameplay.
+This project is not meant to impact the world in some way. The point of a game is to provide entertainment, which will only impact a portion of the population if it were to gain traction within the community. At the current time, there is no plan for a meaningful story in the game, so the impact will be purely driven by the quality of the gameplay.
 
 \subsection{Challenges}
 The main challenges will most likely be coding the physics of the player character; developing new mechanics instead of being purely moving and jumping; keeping the game fun despite the difficulty.
 
 
 \section{Scope}
-This platforming game is considered done once a full four stages of the game are playable from start to finish with minimal bugs or exploits. The player should be able to get through these stages without too much unnecessary frustration with either the difficulty of these stages or the control of the player character. The player character should be fully implemented with all moves intact (run, jump, and attack at minimum) and all hazards/objects in the stages should be fully functional. As a stretch goal, we want to include more stages with extra hazards. An additional stretch goal is the addition of extra moves the player character can obtain in these extra levels.
+This platforming game is considered done once three levels of the game are playable from start to finish with minimal bugs or exploits. The player should be able to get through these stages without too much unnecessary frustration with either the difficulty of these stages or the control of the player character. The player character should be fully implemented with all moves intact (moving, jumping) and all hazards(such as spikes) should fail the level upon contact with the player character. As a stretch goal, we want to include more levels with new hazards. An additional stretch goal is the addition of extra moves(i.e walljumping, sliding) the player character requires to progress in more difficult levels. An additional stretch goal is scaling the window and the game assets to fit more than one resolution.
 
 \subsection{Requirements}
 [Placeholder]
@@ -261,7 +261,10 @@ Alternative: Item already exists in the cart
 \item[Termination Outcome:] The user now has multiple instances of the item in their cart.
 \end{enumerate}
 
-You will often also need to include pictures or diagrams.  It is quite common to see use-case diagrams in such write-ups.  To properly reference an image, you will need to use the \texttt{figure} environment and will need to reference it in your text (via the \texttt{ref} command) (see Figure \ref{cat1}).  NOTE: this is not a use case diagram, but a kitten.
+You will often also need to include pictures or diagrams.  It is quite common to see use-case diagrams in such write-ups.  To properly reference an image, you will need to use the \texttt{figure} environment and will need to reference it in your text (via the \texttt{ref} command) 
+(see Figure \ref{Level Mockup.png})
+(see Figure \ref{Start Mockup.png})
+(see Figure \ref{Select Mockup.png})
 
 After fully describing a use case, it is time to move on to the next use case:
 
@@ -275,9 +278,21 @@ After fully describing a use case, it is time to move on to the next use case:
 You will then need to continue to flesh out all use cases you have identified for your project.
 
 \begin{figure}[ht!]
-\includegraphics[height=250px, width=350px]{cat1.jpg}
-\caption{First picture, this is a kitten, not a use case diagram}
-\label{cat1}
+\includegraphics[height=250px, width=350px]{Level Mockup.png}
+\caption{Mockup of a player loading into a level}
+\label{Level Mockup.png}
+\end{figure}
+
+\begin{figure}[ht!]
+\includegraphics[height=250px, width=350px]{Start Mockup.png}
+\caption{Mockup of the main menu screen}
+\label{Start Mockup.png}
+\end{figure}
+
+\begin{figure}[ht!]
+\includegraphics[height=250px, width=350px]{Select Mockup.png}
+\caption{Mockup of the level select screen}
+\label{Select Mockup.png}
 \end{figure}
 
 \subsection{Interface Mockups}
