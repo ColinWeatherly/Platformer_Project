@@ -199,22 +199,24 @@ The main challenges will most likely be coding the physics of the player charact
 This platforming game is considered done once three levels of the game are playable from start to finish with minimal bugs or exploits. The player should be able to get through these stages without too much unnecessary frustration with either the difficulty of these stages or the control of the player character. The player character should be fully implemented with all moves intact (moving, jumping) and all hazards(such as spikes) should fail the level upon contact with the player character. As a stretch goal, we want to include more levels with new hazards. An additional stretch goal is the addition of extra moves(i.e walljumping, sliding) the player character requires to progress in more difficult levels. An additional stretch goal is scaling the window and the game assets to fit more than one resolution.
 
 \subsection{Requirements}
-[Placeholder]
 
 \subsubsection{Functional}
 \begin{itemize}
-\item Placeholder
+\item Player's completed levels stay completed – user's completed levels persist after the application is exited and started again
+\item User inputs via designated keys are read – the application should register the inputs and move the player character accordingly
+\item Selecting New Game erases the user's save data – completed levels will return to being uncompleted, player is loaded into the first level as if starting the game for the first time
+\item Level fails upon contact with a hazard – should the player character run into a hazard(i.e spike), level is failed and character is returned to the starting point of the same level
 \end{itemize}
 
 \subsubsection{Non-Functional}
 \begin{itemize}
-\item Placeholder
+\item The game correctly displays in a 1280x720 resolution window
+\item The game runs at a smooth framerate, preferably 30 frames per second
+\item User's inputs have little to no delay, preferably under half a second
 \end{itemize}
 
 \subsection{Use Cases}
-This subsection is arguably part of how you define your project scope (why it is in the Scope section...).  In a traditional Waterfall approach, as part of your requirements gathering phase (what does the product actually \emph{need} to do?), you will typically sit down with a user to develop use cases.
-
-You should have a table listing all use cases discussed in the document, the ID is just the order it is listed in, the name should be indicative of what should happen, the primary actor is typically most important in an application where you may have different levels of users (think admin vs normal user), complexity is a best-guess on your part as to how hard it should be.  A lower number in priority indicates that it needs to happen sooner rather than later.  A sample table, or Use Case Index can be seen in Table \ref{tab:useCaseIndex}.
+These are cases in which the user will interact with the program's user interface. The use cases can be seen in Table \ref{tab:useCaseIndex}.
 
 
 
@@ -225,58 +227,77 @@ You should have a table listing all use cases discussed in the document, the ID 
 \hline
 Use Case ID & Use Case Name & Primary Actor & Complexity & Priority \\
 \hline \hline
-1 & Case 1 & Actor 1 & Complexity 1 & 1\\
+1 & Start New Game & User & Low & 1\\
 \hline
-2 & Case 2 & Actor 2 & Complexity 2 & 1\\
+2 & Level Select & User & Low & 1\\
+\hline
+3 & Character Jump & User & Medium & 1\\
 \hline
 
 \end{tabular}
-\caption{Sample use case table}
+\caption{Use case table}
 \label{tab:useCaseIndex}
 \end{table}
 
 
 \begin{itemize}
 \item[Use Case Number:] 1
-\item[Use Case Name:] Add item to cart
-\item[Description:] A shopper on our site has identified an item they wish to buy.  They will click on a ``Add to Cart" button.  This will kick off a process to add one instance of the item to their cart.
+\item[Use Case Name:] Start New Game
+\item[Description:] The player decides to begin the game from the beginning (Level 1). They will click on the ``New Game" button (see Figure \ref{Start Mockup.png}). This will load the first level of the game (see Figure \ref{Level Mockup.png}). NOTE:This is only a conceptualized level meant to show loading into a level, not specifically level 1.
 \end{itemize}
 
-You will then go on to (minimally) discuss a basic flow for the process:
+Process flow:
 
 \begin{enumerate}
-\item User navigates to page listing desired item
-\item User left-clicks on ``Add to Cart" button.
-\item User cart is updated to reflect the new item, this also updates the current total.
-\item[Termination Outcome:] The user now has a single instance of the item in their cart.
+\item Player starts the program, which begins with the main menu loaded.
+\item The player left-clicks the ``New Game" option on the menu.
+\item The game state is updated to gameplay, and the first level is loaded.
+\item[Termination Outcome:] Gameplay has begun in level 1.
 \end{enumerate}
-
-You may need to also add in any alternative flows:
-
-Alternative: Item already exists in the cart
-\begin{enumerate}
-\item User navigates to page listing desired item
-\item User left-clicks on ``Add to Cart" button.
-\item User cart is updated to reflect the new item, showing that one more instance of the existing item has been added.  This also updates the current total.
-\item[Termination Outcome:] The user now has multiple instances of the item in their cart.
-\end{enumerate}
-
-You will often also need to include pictures or diagrams.  It is quite common to see use-case diagrams in such write-ups.  To properly reference an image, you will need to use the \texttt{figure} environment and will need to reference it in your text (via the \texttt{ref} command) 
-(see Figure \ref{Level Mockup.png})
-(see Figure \ref{Start Mockup.png})
-(see Figure \ref{Select Mockup.png})
-
-After fully describing a use case, it is time to move on to the next use case:
 
 \begin{itemize}
 \item[Use Case Number:] 2
-\item[Use Case Name:] Checkout
-\item[Description:] A shopper on our site has finished shopping.  They will click on a ``Checkout" button.  This will kick off a process to calculate cart total, any taxes, shipping rates, and collect payment from the shopper.
-
+\item[Use Case Name:] Level Select
+\item[Description:] The player is on the main menu. The player wishes to choose a specific level in the game to play. They will left-click the ``Level Select" button on the main menu, and the screen will update to show a list of levels in vertical descending order. The player then left-click a button corresponding to a specific level, and the game will load the corresponding level (see Figure \ref{Select Mockup.png}).
 \end{itemize}
 
-You will then need to continue to flesh out all use cases you have identified for your project.
+Process flow:
 
+\begin{enumerate}
+\item Player starts the program, which begins with the main menu loaded.
+\item The player left-clicks the ``Level Select" option on the main menu.
+\item The level select screen is loaded, showing each level vertically in numerically descending order.
+\item The player left-clicks the option corresponding to their desired level.
+\item The game state is updated to gameplay, and the corresponding level loads.
+\item[Termination Outcome:] Gameplay has begun in the player's selected level.
+\end{enumerate}
+
+\begin{itemize}
+\item[Use Case Number:] 3
+\item[Use Case Name:] Character Jump
+\item[Description:] The player is in gameplay. They wish to make the player character jump (in order to avoid hazards such as spikes). The player then hits the space bar. The player character will then leap upward. The character will gradually rise up off the ground for a few seconds, then gradually fall back to the ground.
+\end{itemize}
+
+Process flow:
+
+\begin{enumerate}
+\item Player is in a stage of gameplay.
+\item The player presses the space bar.
+\item The player character then leaps off the ground into the air.
+\item After a few seconds of gradually rising upward, the player character then gradually falls until hitting the ground.
+\item[Termination Outcome:] The player character has completed a full jump.
+\end{enumerate}
+
+Alternative: Player character is already jumping
+\begin{enumerate}
+\item The player presses the space bar as the player character is in mid-jump.
+\item The input is ignored, as the game recognized that the character is already jumping.
+\item The player cannot initiate another jump until the current jump has completed.
+\item[Termination Outcome:] The player's space bar input is ignored while the character is already jumping.
+\end{enumerate}
+
+
+\subsection{Interface Mockups}
 \begin{figure}[ht!]
 \includegraphics[height=250px, width=350px]{Level Mockup.png}
 \caption{Mockup of a player loading into a level}
@@ -294,11 +315,6 @@ You will then need to continue to flesh out all use cases you have identified fo
 \caption{Mockup of the level select screen}
 \label{Select Mockup.png}
 \end{figure}
-
-\subsection{Interface Mockups}
-At first, this will largely be completely made up, as you get further along in your project, and closer to a final product, this will typically become simple screenshots of your running application.
-
-In this subsection, you will be showing what the screen should look like as the user moves through various use cases (make sure to tie the interface mockups back to the specific use cases they illustrate).
 
 
 

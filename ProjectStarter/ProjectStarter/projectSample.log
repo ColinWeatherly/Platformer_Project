@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.5)  1 MAR 2022 16:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.5)  1 MAR 2022 23:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -361,52 +361,52 @@ LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 20
-6.
+5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.03749> on input line 206.
+(Font)              <10.03749> on input line 205.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.0262> on input line 206.
+(Font)              <7.0262> on input line 205.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.01874> on input line 206.
+(Font)              <5.01874> on input line 205.
  [1{C:/Users/pegr5/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 224.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 226.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8.03> on input line 224.
+(Font)              <8.03> on input line 226.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.62097> on input line 224.
+(Font)              <5.62097> on input line 226.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.015> on input line 224.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
-64.
+(Font)              <4.015> on input line 226.
+ [2]
+<Level Mockup.png, id=103, 1946.02031pt x 1065.9825pt>
+File: Level Mockup.png Graphic file (type png)
+<use Level Mockup.png>
+Package pdftex.def Info: Level Mockup.png  used on input line 302.
+(pdftex.def)             Requested size: 351.30783pt x 250.92882pt.
+<Start Mockup.png, id=104, 1638.87282pt x 1005.00468pt>
+File: Start Mockup.png Graphic file (type png)
+<use Start Mockup.png>
+Package pdftex.def Info: Start Mockup.png  used on input line 308.
+(pdftex.def)             Requested size: 351.30049pt x 250.92851pt.
+<Select Mockup.png, id=105, 1672.74937pt x 1004.25188pt>
+File: Select Mockup.png Graphic file (type png)
+<use Select Mockup.png>
+Package pdftex.def Info: Select Mockup.png  used on input line 314.
+(pdftex.def)             Requested size: 351.31326pt x 250.93976pt.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
+28.
  (E:\MikTex\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<Level Mockup.png, id=83, 1946.02031pt x 1065.9825pt>
-File: Level Mockup.png Graphic file (type png)
-<use Level Mockup.png>
-Package pdftex.def Info: Level Mockup.png  used on input line 281.
-(pdftex.def)             Requested size: 351.30783pt x 250.92882pt.
-<Start Mockup.png, id=84, 1638.87282pt x 1005.00468pt>
-File: Start Mockup.png Graphic file (type png)
-<use Start Mockup.png>
-Package pdftex.def Info: Start Mockup.png  used on input line 287.
-(pdftex.def)             Requested size: 351.30049pt x 250.92851pt.
-<Select Mockup.png, id=85, 1672.74937pt x 1004.25188pt>
-File: Select Mockup.png Graphic file (type png)
-<use Select Mockup.png>
-Package pdftex.def Info: Select Mockup.png  used on input line 293.
-(pdftex.def)             Requested size: 351.31326pt x 250.93976pt.
- [2]
-[3 <./Level Mockup.png> <./Start Mockup.png>]
 <cat2.jpg, id=107, 236.885pt x 200.75pt>
 File: cat2.jpg Graphic file (type jpg)
 <use cat2.jpg>
-Package pdftex.def Info: cat2.jpg  used on input line 315.
+Package pdftex.def Info: cat2.jpg  used on input line 331.
 (pdftex.def)             Requested size: 355.32661pt x 301.12424pt.
 
-** WARNING: \IEEEbiography is locked out when in conference mode (line 346).
+[3 <./Level Mockup.png>] [4 <./Start Mockup.png> <./Select Mockup.png>]
+** WARNING: \IEEEbiography is locked out when in conference mode (line 362).
 ** WARNING: \IEEEbiographynophoto is locked out when in conference mode (line 3
-51).
+67).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -418,25 +418,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4 <./Select Mockup.png>] [5 <./cat2.jpg>] (projectSample.aux)
+[5 <./cat2.jpg>] (projectSample.aux)
 Package rerunfilecheck Info: File `projectSample.out' has not changed.
 (rerunfilecheck)             Checksum: D1292BFF0D8844DD2CE3E31956FF90EA;1928.
  ) 
 Here is how much of TeX's memory you used:
- 9540 strings out of 478593
- 153101 string characters out of 2861020
- 454931 words of memory out of 3000000
+ 9548 strings out of 478593
+ 153154 string characters out of 2861020
+ 456924 words of memory out of 3000000
  27574 multiletter control sequences out of 15000+600000
- 508748 words of font info for 93 fonts, out of 8000000 for 9000
+ 507612 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,63p,859b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,63p,859b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
 {E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb><E:/MikTex/fonts/type1/urw/courier/ucrr8a.pfb><E:/MikTex/fonts/ty
 pe1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on projectSample.pdf (5 pages, 262059 bytes).
+Output written on projectSample.pdf (5 pages, 263591 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
