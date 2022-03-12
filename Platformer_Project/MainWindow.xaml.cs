@@ -20,9 +20,21 @@ namespace Platformer_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Left:
+                    break;
+                case Key.Right:
+                    break;
+            }
         }
     }
 }

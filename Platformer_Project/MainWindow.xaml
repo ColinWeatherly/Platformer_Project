@@ -5,8 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformer_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="757" Width="1295" Grid.IsSharedSizeScope="True" ResizeMode="NoResize">
+    <Grid Width="1280" Margin="0,0,0,-33">
+        <Image HorizontalAlignment="Left" Height="80" Margin="0,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="80,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="160,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="240,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="320,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="400,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="480,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="560,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="640,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="720,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="800,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="880,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="960,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="1040,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="1120,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="1200,640,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="0,560,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="0,480,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="0,400,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="0,320,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="0,240,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="0,160,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="0,80,0,0" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="80,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="160,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="240,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="320,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="400,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="480,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="560,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="640,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="720,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="800,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="880,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="960,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="1040,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="1120,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="1200,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="1200,80,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="1200,160,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="1200,240,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="1200,320,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="1200,400,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="1200,480,0,0"/>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Source="/Assets/TestBlock.png" Margin="1200,560,0,0"/>
     </Grid>
 </Window>
