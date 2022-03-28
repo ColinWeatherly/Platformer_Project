@@ -141,7 +141,7 @@
 
 \begin{document}
 
-\title{Unnamed Platformer\\ for UTM CSCI 352}
+\title{3ly-Zium\\ for UTM CSCI 352}
 %
 %
 
@@ -291,27 +291,27 @@ Process flow:
 Alternative: Player character is already jumping
 \begin{enumerate}
 \item The player presses the space bar as the player character is in mid-jump.
-\item The input is ignored, as the game recognized that the character is already jumping.
-\item The player cannot initiate another jump until the current jump has completed.
-\item[Termination Outcome:] The player's space bar input is ignored while the character is already jumping.
+\item The player character performs a rotation mid-jump.
+\item Outcome is dependent on whether the player contacts a wall.
+\item[Termination Outcome:] If the player contacts a wall they will be launched away from the wall horizontally. Else, the player will complete a full jump as if they had inputted a normal jump.
 \end{enumerate}
 
 
 \subsection{Interface Mockups}
 \begin{figure}[ht!]
-\includegraphics[height=250px, width=350px]{Level Mockup.png}
+\includegraphics[height=250px, width=400px]{Level Mockup.png}
 \caption{Mockup of a player loading into a level}
 \label{Level Mockup.png}
 \end{figure}
 
 \begin{figure}[ht!]
-\includegraphics[height=250px, width=350px]{Start Mockup.png}
+\includegraphics[height=250px, width=400px]{Start Mockup.png}
 \caption{Mockup of the main menu screen}
 \label{Start Mockup.png}
 \end{figure}
 
 \begin{figure}[ht!]
-\includegraphics[height=250px, width=350px]{Select Mockup.png}
+\includegraphics[height=250px, width=400px]{Select Mockup.png}
 \caption{Mockup of the level select screen}
 \label{Select Mockup.png}
 \end{figure}
@@ -319,7 +319,13 @@ Alternative: Player character is already jumping
 
 
 \section{Project Timeline}
-Go back to your notes and look up a typical project development life cycle for the Waterfall approach.  How will you follow this life cycle over the remainder of this semester?  This will usually involve a chart showing your proposed timeline, with specific milestones plotted out.  Make sure you have deliverable dates from the course schedule listed, with a plan to meet them (NOTE: these are generally optimistic deadlines).
+Refer to figure 4.
+\begin{figure}[ht!]
+\includegraphics[height=400px, width=300px]{Timeline.jpg}
+\caption{Timeline}
+\label{Timeline.jpg}
+\end{figure}
+
 
 \section{Project Structure}
 At first, this will be a little empty (it will need to be filled in by the time you turn in your final report).  This is your chance to discuss all of your design decisions (consider this the README's big brother).
