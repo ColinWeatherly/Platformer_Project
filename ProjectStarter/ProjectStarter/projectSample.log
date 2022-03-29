@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.5)  28 MAR 2022 18:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.5)  28 MAR 2022 20:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -392,26 +392,25 @@ File: Select Mockup.png Graphic file (type png)
 <use Select Mockup.png>
 Package pdftex.def Info: Select Mockup.png  used on input line 314.
 (pdftex.def)             Requested size: 401.48921pt x 250.93489pt.
-<Timeline.jpg, id=106, 240.9pt x 311.0019pt>
+<Timeline.jpg, id=107, 240.9pt x 311.0019pt>
 File: Timeline.jpg Graphic file (type jpg)
 <use Timeline.jpg>
 Package pdftex.def Info: Timeline.jpg  used on input line 324.
 (pdftex.def)             Requested size: 301.15364pt x 401.50258pt.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
-34.
- (E:\MikTex\tex/latex/psnfss\ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-<cat2.jpg, id=108, 236.885pt x 200.75pt>
+<Facade.png, id=109, 979.66pt x 725.71124pt>
+File: Facade.png Graphic file (type png)
+<use Facade.png>
+Package pdftex.def Info: Facade.png  used on input line 336.
+(pdftex.def)             Requested size: 401.49878pt x 351.3162pt.
+<cat2.jpg, id=110, 236.885pt x 200.75pt>
 File: cat2.jpg Graphic file (type jpg)
 <use cat2.jpg>
-Package pdftex.def Info: cat2.jpg  used on input line 337.
+Package pdftex.def Info: cat2.jpg  used on input line 342.
 (pdftex.def)             Requested size: 355.32661pt x 301.12424pt.
-
-[3 <./Level Mockup.png>] [4 <./Start Mockup.png> <./Select Mockup.png>]
-** WARNING: \IEEEbiography is locked out when in conference mode (line 368).
+ [3 <./Level Mockup.png>] [4 <./Start Mockup.png> <./Select Mockup.png>]
+** WARNING: \IEEEbiography is locked out when in conference mode (line 373).
 ** WARNING: \IEEEbiographynophoto is locked out when in conference mode (line 3
-73).
+78).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -423,25 +422,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5 <./Timeline.jpg>] [6 <./cat2.jpg>] (projectSample.aux)
+[5 <./Timeline.jpg>] [6 <./Facade.png>] [7 <./cat2.jpg>] (projectSample.aux)
 Package rerunfilecheck Info: File `projectSample.out' has not changed.
 (rerunfilecheck)             Checksum: D1292BFF0D8844DD2CE3E31956FF90EA;1928.
  ) 
 Here is how much of TeX's memory you used:
- 9558 strings out of 478593
- 153297 string characters out of 2861020
- 456954 words of memory out of 3000000
- 27581 multiletter control sequences out of 15000+600000
- 507612 words of font info for 92 fonts, out of 8000000 for 9000
+ 9531 strings out of 478593
+ 152909 string characters out of 2861020
+ 456850 words of memory out of 3000000
+ 27556 multiletter control sequences out of 15000+600000
+ 507097 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,63p,859b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,63p,859b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
 {E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb><E:/MikTex/fonts/type1/urw/courier/ucrr8a.pfb><E:/MikTex/fonts/ty
-pe1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type1/urw/times/utmr8a.pfb><E:/MikTex
-/fonts/type1/urw/times/utmri8a.pfb>
-Output written on projectSample.pdf (6 pages, 412835 bytes).
+/cm/cmsy7.pfb><E:/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type
+1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on projectSample.pdf (7 pages, 423180 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 
