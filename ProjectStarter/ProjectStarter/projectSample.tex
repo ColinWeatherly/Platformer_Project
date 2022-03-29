@@ -328,7 +328,7 @@ Refer to Figure \ref{Timeline}.
 
 
 \section{Project Structure}
-At first, this will be a little empty (it will need to be filled in by the time you turn in your final report).  This is your chance to discuss all of your design decisions (consider this the README's big brother).
+From main, the menus will be loaded. From here, StartMenu will contain methods for all of the choices, which will start the game, access the LevelSelect, or close the program. The LevelSelect and StartMenu can both load into the gameplay. Game runs the gameplay. From here, collision is loaded for the stage from a Collision object, which is a child of the Load class, which handles the loading of the correct stage. The Character is also loaded, which contains all of the information of the character, including the character’s position and collision. The movement classes helps with Character movement handling, such as jumping, horizontal movement, and jumping collision.
 
 \subsection{UML Outline}
 Facade: refer to Figure \ref{Facade}.
