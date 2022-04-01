@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:Platformer_Project"
         mc:Ignorable="d"
         Title="MainWindow" Height="757" Width="1295" Grid.IsSharedSizeScope="True" ResizeMode="NoResize">
-    <Grid Width="1280" Margin="0,0,0,-33">
-        <Rectangle x:Name="Wall1" HorizontalAlignment="Center" Height="120" Margin="0,622,0,0" Stroke="Black" VerticalAlignment="Top" Width="912" Fill="#FF6F84C8"/>
-        <Rectangle x:Name="Wall2" HorizontalAlignment="Left" Height="742" Margin="1096,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="120" Fill="#FF6F84C8" RadiusX="3.052" RadiusY="3.052"/>
-        <Rectangle x:Name="Death1" HorizontalAlignment="Left" Height="46" Margin="0,696,0,0" Stroke="Black" VerticalAlignment="Top" Width="184" Fill="#FFF12643"/>
-        <Rectangle x:Name="Player" HorizontalAlignment="Center" Height="120" Stroke="Black" VerticalAlignment="Top" Width="112" Fill="#FF343847" Margin="0,467,0,0"/>
-    </Grid>
+    <Canvas x:Name="MyCanvas" Focusable="True" Width="1280" Margin="0,0,0,-33" KeyDown="keyisdown" KeyUp="keyisup">
+        <Label Name="Timer" Margin="-1372,221,1372,-221"></Label>
+        <Rectangle Name="Player" Height="99" Width="67" Fill="Blue" Canvas.Top="151" Canvas.Left="110"/>
+        <Rectangle Name="ground" Height="32" Width="792" Fill="Black" Canvas.Top="585" Canvas.Left="0"/>
+
+    </Canvas>
 </Window>
