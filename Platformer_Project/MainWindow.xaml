@@ -9,7 +9,7 @@
     <Canvas x:Name="MyCanvas" Focusable="True" Width="1280" Margin="0,0,0,-33" KeyDown="keyisdown" KeyUp="keyisup">
         <Label Name="Timer" Margin="-1372,221,1372,-221"></Label>
         <Rectangle Name="Player" Height="99" Width="67" Fill="Blue" Canvas.Top="151" Canvas.Left="110"/>
-        <Rectangle Name="ground" Height="32" Width="792" Fill="Black" Canvas.Top="585" Canvas.Left="0"/>
+        <Rectangle Name="ground" Height="32" Width="792" Fill="Black" Canvas.Top="729" Canvas.Left="0"/>
 
     </Canvas>
 </Window>

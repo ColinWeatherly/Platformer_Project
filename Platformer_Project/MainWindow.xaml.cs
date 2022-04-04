@@ -25,9 +25,10 @@ namespace Platformer_Project
         bool goleft = false;
         bool goright = false;
         bool jumping = false;
+        bool grounded = false;
 
         int jumpSpeed = 10;
-        int force = 8;
+        int force = 20;
         int score = 0;
 
         Rect playerHitBox;
@@ -39,7 +40,7 @@ namespace Platformer_Project
             MyCanvas.Focus();
             
             dtClockTime.Tick += dtClockTime_Tick;
-            dtClockTime.Interval = TimeSpan.FromMilliseconds(20); //in Hour, Minutes, Second.
+            dtClockTime.Interval = TimeSpan.FromMilliseconds(10); //in Hour, Minutes, Second.
             
 
             dtClockTime.Start();
@@ -70,18 +71,19 @@ namespace Platformer_Project
                 case Key.Right:
                     goright = false;
                     break;
-                case Key.Space:
-                    jumping = true;
-                    force = 15;
-                    jumpSpeed = -12;
-                    break;
+                //case Key.Space:
+                    //jumping = true;
+                    //force = 15;
+                    //jumpSpeed = -12;
+                   // break;
             }
-            if(e.Key == Key.Space && jumping == false)
+            if(e.Key == Key.Space && jumping == false && grounded == true)
             {
+                grounded = false;
                 jumping = true;
-                force = 15;
+                force = 20;
                 jumpSpeed = -12;
-                //Canvas.SetTop(Player, Canvas.GetTop(Player) - jumpSpeed);
+                Canvas.SetTop(Player, Canvas.GetTop(Player) - jumpSpeed);
             }
         }
         private void dtClockTime_Tick(object sender, EventArgs e)
@@ -93,27 +95,29 @@ namespace Platformer_Project
 
             
 
-            //if (goleft)
-            //{
-            //    Canvas.SetLeft(Player, x - 5);
-            //}
+            if (goleft)
+            {
+               Canvas.SetLeft(Player, x - 5);
+            }
 
-            //if (goright)
-            //{
-            //    Canvas.SetLeft(Player, x + 5);
-            //}
+            if (goright)
+            {
+                Canvas.SetLeft(Player, x + 5);
+            }
 
             playerHitBox = new Rect(x, y, Player.Width - 15, Player.Height);
             groundHitBox = new Rect(Canvas.GetLeft(ground), Canvas.GetTop(ground), ground.Width - 15, ground.Height - 10);
 
             if (playerHitBox.IntersectsWith(groundHitBox))
             {
-                jumpSpeed = 0;
-                Canvas.SetTop(Player, Canvas.GetTop(ground) - Player.Height);
-                jumping = false;
+                if (jumping == false)
+                {
+                    Canvas.SetTop(Player, Canvas.GetTop(ground) - Player.Height);
+                    grounded = true;
+                }
             }
 
-            if(jumping == true)
+            if(jumping)
             {
                 jumpSpeed = -9;
 
