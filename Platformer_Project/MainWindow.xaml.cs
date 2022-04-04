@@ -26,13 +26,15 @@ namespace Platformer_Project
         bool goright = false;
         bool jumping = false;
         bool grounded = false;
+        bool wallJump = false;
+        bool wallBounce = false;
 
         int jumpSpeed = 10;
         int force = 20;
-        int score = 0;
 
         Rect playerHitBox;
         Rect groundHitBox;
+        Rect wallHitBox;
 
         public MainWindow()
         {
@@ -77,13 +79,18 @@ namespace Platformer_Project
                     //jumpSpeed = -12;
                    // break;
             }
-            if(e.Key == Key.Space && jumping == false && grounded == true)
+            if(e.Key == Key.Space && jumping == false && grounded == true || wallJump == true)
             {
                 grounded = false;
                 jumping = true;
+                wallJump = false;
                 force = 20;
                 jumpSpeed = -12;
                 Canvas.SetTop(Player, Canvas.GetTop(Player) - jumpSpeed);
+            }
+            if(e.Key == Key.Space && jumping == true)
+            {
+                wallBounce = true;
             }
         }
         private void dtClockTime_Tick(object sender, EventArgs e)
@@ -105,8 +112,9 @@ namespace Platformer_Project
                 Canvas.SetLeft(Player, x + 5);
             }
 
-            playerHitBox = new Rect(x, y, Player.Width - 15, Player.Height);
+            playerHitBox = new Rect(x, y, Player.Width, Player.Height);
             groundHitBox = new Rect(Canvas.GetLeft(ground), Canvas.GetTop(ground), ground.Width - 15, ground.Height - 10);
+            wallHitBox = new Rect(Canvas.GetLeft(wall), Canvas.GetTop(wall), wall.Width, wall.Height - 10);
 
             if (playerHitBox.IntersectsWith(groundHitBox))
             {
@@ -115,6 +123,19 @@ namespace Platformer_Project
                     Canvas.SetTop(Player, Canvas.GetTop(ground) - Player.Height);
                     grounded = true;
                 }
+            }
+
+            if (playerHitBox.IntersectsWith(wallHitBox))
+            {
+                Canvas.SetLeft(Player, Canvas.GetLeft(wall) - (Player.Width + 1));
+                wallJump = true;
+                
+            }
+
+            if(wallBounce == true && wallJump == true)
+            {
+                Canvas.SetLeft(Player, x + 20);
+                wallBounce = false;
             }
 
             if(jumping)
