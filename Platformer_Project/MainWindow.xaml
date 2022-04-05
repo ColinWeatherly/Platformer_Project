@@ -11,7 +11,7 @@
         <Rectangle Name="Player" Height="99" Width="67" Fill="Blue" Canvas.Top="151" Canvas.Left="110"/>
         <Rectangle Name="ground" Height="32" Width="1270" Fill="Black" Canvas.Top="729" Canvas.Left="0"/>
         <Rectangle x:Name="wall" Fill="Black" Height="751" Canvas.Left="1180" Canvas.Top="10" Width="100"/>
-        <Rectangle x:Name="wall2" Fill="Black" Height="751" Canvas.Top="10" Width="100"/>
+        <Rectangle x:Name="wall2" Fill="Black" Height="751" Canvas.Top="10" Width="105" Canvas.Right="1180"/>
 
     </Canvas>
 </Window>

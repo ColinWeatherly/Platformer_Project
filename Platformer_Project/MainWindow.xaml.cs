@@ -44,7 +44,7 @@ namespace Platformer_Project
             MyCanvas.Focus();
             
             dtClockTime.Tick += dtClockTime_Tick;
-            dtClockTime.Interval = TimeSpan.FromMilliseconds(10); //in Hour, Minutes, Second.
+            dtClockTime.Interval = TimeSpan.FromMilliseconds(5); //in Hour, Minutes, Second.
             
 
             dtClockTime.Start();
@@ -76,11 +76,7 @@ namespace Platformer_Project
                 case Key.Right:
                     goright = false;
                     break;
-                //case Key.Space:
-                    //jumping = true;
-                    //force = 15;
-                    //jumpSpeed = -12;
-                   // break;
+                
             }
             if(e.Key == Key.Space && jumping == false && grounded == true || e.Key == Key.Space && jumping == false && wallJumpRight == true || e.Key == Key.Space && jumping == false && wallJumpLeft == true)
             {
@@ -115,7 +111,7 @@ namespace Platformer_Project
             playerHitBox = new Rect(x, y, Player.Width, Player.Height);
             groundHitBox = new Rect(Canvas.GetLeft(ground), Canvas.GetTop(ground), ground.Width - 15, ground.Height - 10);
             wallHitBoxLeft = new Rect(Canvas.GetLeft(wall), Canvas.GetTop(wall), wall.Width, wall.Height - 10);
-            wallHitBoxRight = new Rect(Canvas.GetRight(wall2), Canvas.GetTop(wall2), wall2.Width, wall2.Height - 10);
+            wallHitBoxRight = new Rect(Canvas.GetRight(wall2), Canvas.GetTop(wall2), wall2.Width + 10, wall2.Height - 10);
 
             if (playerHitBox.IntersectsWith(groundHitBox))
             {
@@ -136,7 +132,7 @@ namespace Platformer_Project
 
             if (playerHitBox.IntersectsWith(wallHitBoxRight))
             {
-                Canvas.SetRight(Player, Canvas.GetRight(wall2) - (Player.Width + 1));
+                Canvas.SetRight(Player, Canvas.GetRight(wall2) + (Player.Width + 1));
                 wallJumpRight = true;
 
             }
