@@ -26,7 +26,8 @@ namespace Platformer_Project
         bool goright = false;
         bool jumping = false;
         bool grounded = false;
-        bool wallJump = false;
+        bool wallJumpLeft = false;
+        bool wallJumpRight = false;
         bool wallBounce = false;
 
         int jumpSpeed = 10;
@@ -34,7 +35,8 @@ namespace Platformer_Project
 
         Rect playerHitBox;
         Rect groundHitBox;
-        Rect wallHitBox;
+        Rect wallHitBoxLeft;
+        Rect wallHitBoxRight;
 
         public MainWindow()
         {
@@ -50,17 +52,18 @@ namespace Platformer_Project
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
-            switch (e.Key)
+            if(e.Key == Key.Left && wallBounce == false)
             {
-                case Key.Left:
-                    goleft = true;
-                    break;
-                case Key.Right:
-                    goright = true;
-                    break;
-                
+                goleft = true;
             }
-            
+            if(e.Key == Key.Right && wallBounce == false)
+            {
+                goright = true;
+            }
+            if (e.Key == Key.Space && jumping == true)
+            {
+                wallBounce = true;
+            }
         }
 
         private void keyisup(object sender, KeyEventArgs e)
@@ -79,18 +82,15 @@ namespace Platformer_Project
                     //jumpSpeed = -12;
                    // break;
             }
-            if(e.Key == Key.Space && jumping == false && grounded == true || wallJump == true)
+            if(e.Key == Key.Space && jumping == false && grounded == true || e.Key == Key.Space && jumping == false && wallJumpRight == true || e.Key == Key.Space && jumping == false && wallJumpLeft == true)
             {
                 grounded = false;
                 jumping = true;
-                wallJump = false;
+                wallJumpRight = false;
+                wallJumpLeft = false;
                 force = 20;
                 jumpSpeed = -12;
                 Canvas.SetTop(Player, Canvas.GetTop(Player) - jumpSpeed);
-            }
-            if(e.Key == Key.Space && jumping == true)
-            {
-                wallBounce = true;
             }
         }
         private void dtClockTime_Tick(object sender, EventArgs e)
@@ -114,7 +114,8 @@ namespace Platformer_Project
 
             playerHitBox = new Rect(x, y, Player.Width, Player.Height);
             groundHitBox = new Rect(Canvas.GetLeft(ground), Canvas.GetTop(ground), ground.Width - 15, ground.Height - 10);
-            wallHitBox = new Rect(Canvas.GetLeft(wall), Canvas.GetTop(wall), wall.Width, wall.Height - 10);
+            wallHitBoxLeft = new Rect(Canvas.GetLeft(wall), Canvas.GetTop(wall), wall.Width, wall.Height - 10);
+            wallHitBoxRight = new Rect(Canvas.GetRight(wall2), Canvas.GetTop(wall2), wall2.Width, wall2.Height - 10);
 
             if (playerHitBox.IntersectsWith(groundHitBox))
             {
@@ -122,20 +123,36 @@ namespace Platformer_Project
                 {
                     Canvas.SetTop(Player, Canvas.GetTop(ground) - Player.Height);
                     grounded = true;
+                    wallBounce = false;
                 }
             }
 
-            if (playerHitBox.IntersectsWith(wallHitBox))
+            if (playerHitBox.IntersectsWith(wallHitBoxLeft))
             {
                 Canvas.SetLeft(Player, Canvas.GetLeft(wall) - (Player.Width + 1));
-                wallJump = true;
+                wallJumpLeft = true;
                 
             }
 
-            if(wallBounce == true && wallJump == true)
+            if (playerHitBox.IntersectsWith(wallHitBoxRight))
             {
-                Canvas.SetLeft(Player, x + 20);
-                wallBounce = false;
+                Canvas.SetRight(Player, Canvas.GetRight(wall2) - (Player.Width + 1));
+                wallJumpRight = true;
+
+            }
+
+            if (wallBounce == true && wallJumpLeft == true || wallBounce == true && wallJumpRight == true)
+            {
+                if(wallJumpLeft == true)
+                {
+                    Canvas.SetLeft(Player, x - 30);
+                }
+                if(wallJumpRight == true)
+                {
+                    Canvas.SetRight(Player, x + 30);
+                }
+                
+                
             }
 
             if(jumping)
