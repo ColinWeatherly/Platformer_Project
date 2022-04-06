@@ -10,8 +10,9 @@
         <Label Name="Timer" Margin="-1372,221,1372,-221"></Label>
         <Rectangle Name="Player" Height="49" Width="29" Fill="Blue" Canvas.Top="413" Canvas.Left="263"/>
         <Rectangle Name="ground" Height="32" Width="1270" Fill="Black" Canvas.Top="729" Canvas.Left="0"/>
-        <Rectangle x:Name="wall" Fill="Black" Height="751" Canvas.Left="1180" Canvas.Top="10" Width="100"/>
+        <Rectangle x:Name="wall" Fill="Black" Height="751" Canvas.Left="1263" Canvas.Top="10" Width="5"/>
         <Rectangle x:Name="wall2" Fill="Black" Height="751" Canvas.Top="10" Width="4" Canvas.Left="10"/>
+        <Rectangle x:Name="wall3" Fill="Black" Height="398" Canvas.Left="124" Canvas.Top="363" Width="5"/>
 
     </Canvas>
 </Window>

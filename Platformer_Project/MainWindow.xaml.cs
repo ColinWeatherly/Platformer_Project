@@ -31,12 +31,15 @@ namespace Platformer_Project
         bool wallBounce = false;
 
         int jumpSpeed = 10;
-        int force = 20;
+        int force = 30;
 
         Rect playerHitBox;
         Rect groundHitBox;
         Rect wallHitBoxLeft;
         Rect wallHitBoxRight;
+
+        Rect wallHitBoxLeft2;
+        Rect wallHitBoxRight2;
 
         public MainWindow()
         {
@@ -63,6 +66,7 @@ namespace Platformer_Project
             if (e.Key == Key.X && jumping == true)
             {
                 wallBounce = true;
+                
             }
             if (e.Key == Key.Z && jumping == false && grounded == true || e.Key == Key.Z && jumping == false && wallJumpRight == true || e.Key == Key.Z && jumping == false && wallJumpLeft == true)
             {
@@ -70,7 +74,7 @@ namespace Platformer_Project
                 jumping = true;
                 wallJumpRight = false;
                 wallJumpLeft = false;
-                force = 20;
+                force = 30;
                 jumpSpeed = -12;
                 Canvas.SetTop(Player, Canvas.GetTop(Player) - jumpSpeed);
             }
@@ -86,8 +90,8 @@ namespace Platformer_Project
                 case Key.Right:
                     goright = false;
                     break;
-                
             }
+            
             /*if(e.Key == Key.Z && jumping == false && grounded == true || e.Key == Key.Z && jumping == false && wallJumpRight == true || e.Key == Key.Z && jumping == false && wallJumpLeft == true)
             {
                 grounded = false;
@@ -121,7 +125,10 @@ namespace Platformer_Project
             playerHitBox = new Rect(x, y, Player.Width, Player.Height);
             groundHitBox = new Rect(Canvas.GetLeft(ground), Canvas.GetTop(ground), ground.Width - 15, ground.Height - 10);
             wallHitBoxRight = new Rect(Canvas.GetLeft(wall), Canvas.GetTop(wall), wall.Width, wall.Height - 10);
-            wallHitBoxLeft = new Rect(Canvas.GetLeft(wall2), Canvas.GetTop(wall2), wall2.Width, wall2.Height - 10);
+            wallHitBoxLeft = new Rect(Canvas.GetLeft(wall2) + wall2.ActualWidth, Canvas.GetTop(wall2), wall2.Width, wall2.Height - 10);
+
+            wallHitBoxRight2 = new Rect(Canvas.GetLeft(wall3), Canvas.GetTop(wall3), wall3.Width, wall3.Height - 10);
+            wallHitBoxLeft2 = new Rect(Canvas.GetLeft(wall3) + wall3.ActualWidth, Canvas.GetTop(wall3), wall3.Width, wall3.Height - 10);
 
             if (playerHitBox.IntersectsWith(groundHitBox))
             {
@@ -129,35 +136,47 @@ namespace Platformer_Project
                 {
                     Canvas.SetTop(Player, Canvas.GetTop(ground) - Player.Height);
                     grounded = true;
-                    wallBounce = false;
                 }
+                wallBounce = false;
             }
 
             if (playerHitBox.IntersectsWith(wallHitBoxRight))
             {
                 Canvas.SetLeft(Player, Canvas.GetLeft(wall) - (Player.Width + 1));
                 wallJumpRight = true;
-                
+                wallBounce = false;
             }
 
             if (playerHitBox.IntersectsWith(wallHitBoxLeft))
             {
-                Canvas.SetLeft(Player, Canvas.GetLeft(wall2) + 5);
+                Canvas.SetLeft(Player, Canvas.GetLeft(wall2) + wall2.Width + 10);
                 wallJumpLeft = true;
+                //wallBounce = false;
+            }
 
+            if (playerHitBox.IntersectsWith(wallHitBoxLeft2))
+            {
+                Canvas.SetLeft(Player, Canvas.GetLeft(wall3) + wall3.Width + 10);
+                wallJumpLeft = true;
+                //wallBounce = false;
+            }
+
+            if (playerHitBox.IntersectsWith(wallHitBoxRight2))
+            {
+                Canvas.SetLeft(Player, Canvas.GetLeft(wall3) - (Player.Width + 1));
+                wallJumpLeft = true;
+               // wallBounce = false;
             }
 
             if (wallBounce == true && wallJumpLeft == true || wallBounce == true && wallJumpRight == true)
             {
                 if(wallJumpLeft == true)
                 {
-                    Canvas.SetLeft(Player, x + 30);
-                    
+                    Canvas.SetLeft(Player, x + 20);
                 }
                 if(wallJumpRight == true)
                 {
-                    Canvas.SetLeft(Player, x - 30);
-                    
+                    Canvas.SetLeft(Player, x - 20);
                 }
                 
                 
@@ -167,18 +186,17 @@ namespace Platformer_Project
             {
                 jumpSpeed = -9;
 
-                force -= 1;
+                force -= 2;
             }
             else
             {
                 jumpSpeed = 12;
             }
 
-            
-
-            if (force < 0)
+            if (force < 0 && wallJumpLeft == false || force < 0 && wallJumpRight == false)
             {
                 jumping = false;
+                //wallBounce = false;
             }
         }
     }
