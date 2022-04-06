@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Shapes;
+using System.Windows.Threading;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows;
+
+namespace Platformer_Project
+{
+    public interface Collision
+    {
+        Rectangle left_collision(Rectangle player);
+        Rectangle right_collision(Rectangle player);
+        Rectangle top_collision(Rectangle player);
+        Rectangle bottom_collision(Rectangle player);
+    }
+}
