@@ -83,7 +83,7 @@ namespace Platformer_Project
                 goleft = false;
                 noleft = false;
             }
-            if (e.Key == Key.X && noright == false && noleft == false && slideCharge != 0 && grounded == true)
+            if (e.Key == Key.X && noright == false && noleft == false && slideCharge != 0)
             {
                 slide = true;
                 slideForce = 25;
