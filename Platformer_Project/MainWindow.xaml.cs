@@ -22,18 +22,25 @@ namespace Platformer_Project
     public partial class MainWindow : Window
     {
         DispatcherTimer dtClockTime = new DispatcherTimer();
+        DispatcherTimer slideCharger = new DispatcherTimer();
         bool goleft = false;
         bool goright = false;
+        bool noleft = false;
+        bool noright = false;
         bool jumping = false;
         bool grounded = false;
         bool wallJumpLeft = false;
         bool wallJumpRight = false;
-        bool wallBounce = false;
+        bool slide = false;
 
-        int jumpSpeed = 10;
-        int force = 30;
+        int jumpSpeed = 8;
+        int speed = 6;
+        int force = 10;
+        int slideSpeed = 2;
+        int slideForce = 25;
+        int slideCharge = 2;
 
-        Rect playerHitBox;
+       Rect playerHitBox;
         Rect groundHitBox;
         Rect wallHitBoxLeft;
         Rect wallHitBoxRight;
@@ -41,42 +48,58 @@ namespace Platformer_Project
         Rect wallHitBoxLeft2;
         Rect wallHitBoxRight2;
 
+        Rect wallHitBoxRight3;
+        Rect wallHitBoxLeft3;
+
+        Rect groundHitBox2;
+        Rect groundHitBox3;
+       
         public MainWindow()
         {
             InitializeComponent();
             MyCanvas.Focus();
             
             dtClockTime.Tick += dtClockTime_Tick;
-            dtClockTime.Interval = TimeSpan.FromMilliseconds(5); //in Hour, Minutes, Second.
-            
+            dtClockTime.Interval = TimeSpan.FromMilliseconds(5);
+
+            slideCharger.Tick += slideCharger_Tick;
+            slideCharger.Interval = TimeSpan.FromSeconds(2);
 
             dtClockTime.Start();
+            slideCharger.Start();
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
-            if(e.Key == Key.Left && wallBounce == false)
+            if (e.Key == Key.Left && noleft == false)
             {
                 goleft = true;
+                goright = false;
+                noright = false;
             }
-            if(e.Key == Key.Right && wallBounce == false)
+            if(e.Key == Key.Right && noright == false)
             {
                 goright = true;
+                goleft = false;
+                noleft = false;
             }
-            if (e.Key == Key.X && jumping == true)
+            if (e.Key == Key.X && noright == false && noleft == false && slideCharge != 0 && grounded == true)
             {
-                wallBounce = true;
-                
+                slide = true;
+                slideForce = 25;
+                slideCharge -= 1;
             }
             if (e.Key == Key.Z && jumping == false && grounded == true || e.Key == Key.Z && jumping == false && wallJumpRight == true || e.Key == Key.Z && jumping == false && wallJumpLeft == true)
             {
-                grounded = false;
-                jumping = true;
+                
+                    grounded = false;
+                    wallJumpLeft = false;
                 wallJumpRight = false;
-                wallJumpLeft = false;
-                force = 30;
-                jumpSpeed = -12;
-                Canvas.SetTop(Player, Canvas.GetTop(Player) - jumpSpeed);
+                    jumping = true;
+                    force = 10;
+                    jumpSpeed = 8;
+                    Canvas.SetTop(Player, Canvas.GetTop(Player) - jumpSpeed);
+                
             }
         }
 
@@ -92,6 +115,7 @@ namespace Platformer_Project
                     break;
             }
             
+            
             /*if(e.Key == Key.Z && jumping == false && grounded == true || e.Key == Key.Z && jumping == false && wallJumpRight == true || e.Key == Key.Z && jumping == false && wallJumpLeft == true)
             {
                 grounded = false;
@@ -103,32 +127,51 @@ namespace Platformer_Project
                 Canvas.SetTop(Player, Canvas.GetTop(Player) - jumpSpeed);
             }*/
         }
+        private void slideCharger_Tick(object sender, EventArgs e)
+        {
+            if(slideCharge == 0)
+            {
+                slideCharge += 2;
+            }
+        }
         private void dtClockTime_Tick(object sender, EventArgs e)
         {
-            double x = Canvas.GetLeft(Player);
-            double y = Canvas.GetTop(Player);
 
-            Canvas.SetTop(Player, y + jumpSpeed);
+                Canvas.SetTop(Player, Canvas.GetTop(Player) + jumpSpeed);
 
-            
 
             if (goleft)
             {
-               Canvas.SetLeft(Player, x - 5);
+               Canvas.SetLeft(Player, Canvas.GetLeft(Player) - speed);
             }
 
             if (goright)
             {
-                Canvas.SetLeft(Player, x + 5);
+                Canvas.SetLeft(Player, Canvas.GetLeft(Player) + speed);
             }
 
-            playerHitBox = new Rect(x, y, Player.Width, Player.Height);
+            if(slide && goleft)
+            {
+                Canvas.SetLeft(Player, Canvas.GetLeft(Player) - (speed * slideSpeed));
+            }
+
+            if(slide && goright)
+            {
+                Canvas.SetLeft(Player, Canvas.GetLeft(Player) + (speed * slideSpeed));
+            }
+            playerHitBox = new Rect(Canvas.GetLeft(Player), Canvas.GetTop(Player), Player.Width, Player.Height);
             groundHitBox = new Rect(Canvas.GetLeft(ground), Canvas.GetTop(ground), ground.Width - 15, ground.Height - 10);
             wallHitBoxRight = new Rect(Canvas.GetLeft(wall), Canvas.GetTop(wall), wall.Width, wall.Height - 10);
-            wallHitBoxLeft = new Rect(Canvas.GetLeft(wall2) + wall2.ActualWidth, Canvas.GetTop(wall2), wall2.Width, wall2.Height - 10);
+            wallHitBoxLeft = new Rect(Canvas.GetLeft(wall2), Canvas.GetTop(wall2), wall2.Width, wall2.Height - 10);
 
-            wallHitBoxRight2 = new Rect(Canvas.GetLeft(wall3), Canvas.GetTop(wall3), wall3.Width, wall3.Height - 10);
-            wallHitBoxLeft2 = new Rect(Canvas.GetLeft(wall3) + wall3.ActualWidth, Canvas.GetTop(wall3), wall3.Width, wall3.Height - 10);
+            wallHitBoxRight2 = new Rect(Canvas.GetLeft(wall3), Canvas.GetTop(wall3), wall3.Width, wall3.Height);
+            wallHitBoxLeft2 = new Rect(Canvas.GetLeft(wall3), Canvas.GetTop(wall3), wall3.Width, wall3.Height);
+
+            wallHitBoxRight3 = new Rect(Canvas.GetLeft(wall4), Canvas.GetTop(wall4), wall4.Width, wall4.Height);
+            wallHitBoxLeft3 = new Rect(Canvas.GetLeft(wall4), Canvas.GetTop(wall4), wall4.Width, wall4.Height);
+
+            groundHitBox2 = new Rect(Canvas.GetLeft(ground2), Canvas.GetTop(ground2), ground2.Width, ground2.Height);
+            groundHitBox3 = new Rect(Canvas.GetLeft(ground3), Canvas.GetTop(ground3), ground3.Width, ground3.Height);
 
             if (playerHitBox.IntersectsWith(groundHitBox))
             {
@@ -137,66 +180,130 @@ namespace Platformer_Project
                     Canvas.SetTop(Player, Canvas.GetTop(ground) - Player.Height);
                     grounded = true;
                 }
-                wallBounce = false;
+                force = 30;
             }
 
-            if (playerHitBox.IntersectsWith(wallHitBoxRight))
+            if (playerHitBox.IntersectsWith(groundHitBox2))
             {
-                Canvas.SetLeft(Player, Canvas.GetLeft(wall) - (Player.Width + 1));
+                if (jumping == false)
+                {
+                    Canvas.SetTop(Player, Canvas.GetTop(ground2) - Player.Height);
+                    grounded = true;
+                }
+                force = 30;
+            }
+
+            if (playerHitBox.IntersectsWith(groundHitBox3))
+            {
+                if (jumping == false)
+                {
+                    Canvas.SetTop(Player, Canvas.GetTop(ground3) - Player.Height);
+                    grounded = true;
+                }
+                force = 30;
+            }
+
+            if (playerHitBox.IntersectsWith(wallHitBoxRight) && goright == true)
+            {
+                Canvas.SetLeft(Player, Canvas.GetLeft(Player) + 1);
+                noright = true;
+                goright = false;
                 wallJumpRight = true;
-                wallBounce = false;
+                wallJumpLeft = false;
+
             }
 
-            if (playerHitBox.IntersectsWith(wallHitBoxLeft))
+            if (playerHitBox.IntersectsWith(wallHitBoxLeft) && goleft == true)
             {
-                Canvas.SetLeft(Player, Canvas.GetLeft(wall2) + wall2.Width + 10);
+                Canvas.SetLeft(Player, Canvas.GetLeft(Player) + 1);
+                noleft = true;
+                goleft = false;
                 wallJumpLeft = true;
-                //wallBounce = false;
+                wallJumpRight = false;
+
+                
             }
 
-            if (playerHitBox.IntersectsWith(wallHitBoxLeft2))
+            if (playerHitBox.IntersectsWith(wallHitBoxLeft2) && goleft == true)
             {
-                Canvas.SetLeft(Player, Canvas.GetLeft(wall3) + wall3.Width + 10);
+                Canvas.SetLeft(Player, Canvas.GetLeft(Player) + 1);
+                noleft = true;
+                goleft = false;
                 wallJumpLeft = true;
-                //wallBounce = false;
+                wallJumpRight = false;
+
+                
             }
 
-            if (playerHitBox.IntersectsWith(wallHitBoxRight2))
+
+
+            if (playerHitBox.IntersectsWith(wallHitBoxRight2) && goright == true)
             {
-                Canvas.SetLeft(Player, Canvas.GetLeft(wall3) - (Player.Width + 1));
-                wallJumpLeft = true;
-               // wallBounce = false;
+                Canvas.SetLeft(Player, Canvas.GetLeft(Player) - 1);
+                noright = true;
+                goright = false;
+                wallJumpRight = true;
+                wallJumpLeft = false;
+                
             }
 
-            if (wallBounce == true && wallJumpLeft == true || wallBounce == true && wallJumpRight == true)
+            if (playerHitBox.IntersectsWith(wallHitBoxRight3) && goright == true)
+            {
+                Canvas.SetLeft(Player, Canvas.GetLeft(Player) - 1);
+                noright = true;
+                goright = false;
+                wallJumpRight = true;
+                wallJumpLeft = false;
+
+            }
+
+            if (playerHitBox.IntersectsWith(wallHitBoxLeft3) && goleft == true)
+            {
+                Canvas.SetLeft(Player, Canvas.GetLeft(Player) + 1);
+                noleft = true;
+                goleft = false;
+                wallJumpLeft = true;
+                wallJumpRight = false;
+
+
+            }
+
+            /*if (wallBounceRight == true && wallJumpRight == true || wallBounceLeft == true && wallJumpLeft == true)
             {
                 if(wallJumpLeft == true)
                 {
-                    Canvas.SetLeft(Player, x + 20);
+                    jumping = false;
+                    Canvas.SetLeft(Player, Canvas.GetLeft(Player) + 20);
                 }
                 if(wallJumpRight == true)
                 {
-                    Canvas.SetLeft(Player, x - 20);
+                    jumping = false;
+                    Canvas.SetLeft(Player, Canvas.GetLeft(Player) - 20);
                 }
                 
                 
             }
-
-            if(jumping)
+            */
+            if (jumping == true && force < 0)
             {
-                jumpSpeed = -9;
-
-                force -= 2;
+                jumping = false;
+            }
+            if(jumping == true)
+            {
+                jumpSpeed = -8;
+                force -= 1;
             }
             else
             {
-                jumpSpeed = 12;
+                jumpSpeed = 8;
             }
-
-            if (force < 0 && wallJumpLeft == false || force < 0 && wallJumpRight == false)
+            if(slide == true && slideForce < 0)
             {
-                jumping = false;
-                //wallBounce = false;
+                slide = false;
+            }
+            if(slide == true)
+            {
+                slideForce -= 2;
             }
         }
     }

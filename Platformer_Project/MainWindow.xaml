@@ -8,11 +8,14 @@
         Title="MainWindow" Height="757" Width="1295" Grid.IsSharedSizeScope="True" ResizeMode="NoResize">
     <Canvas x:Name="MyCanvas" Focusable="True" Width="1280" Margin="0,0,0,-33" KeyDown="keyisdown" KeyUp="keyisup">
         <Label Name="Timer" Margin="-1372,221,1372,-221"></Label>
-        <Rectangle Name="Player" Height="49" Width="29" Fill="Blue" Canvas.Top="413" Canvas.Left="263"/>
-        <Rectangle Name="ground" Height="32" Width="1270" Fill="Black" Canvas.Top="729" Canvas.Left="0"/>
-        <Rectangle x:Name="wall" Fill="Black" Height="751" Canvas.Left="1263" Canvas.Top="10" Width="5"/>
-        <Rectangle x:Name="wall2" Fill="Black" Height="751" Canvas.Top="10" Width="4" Canvas.Left="10"/>
-        <Rectangle x:Name="wall3" Fill="Black" Height="398" Canvas.Left="124" Canvas.Top="363" Width="5"/>
+        <Rectangle Name="Player" Height="49" Width="30" Fill="Blue" Canvas.Top="352" Canvas.Left="276"/>
+        <Rectangle Name="ground" Height="32" Width="1270" Fill="Black" Canvas.Top="692" Canvas.Left="0" Tag="object"/>
+        <Rectangle x:Name="wall" Fill="Black" Height="751" Canvas.Left="1263" Canvas.Top="10" Width="5" Tag="object"/>
+        <Rectangle x:Name="wall2" Fill="Black" Height="751" Canvas.Top="10" Width="4" Canvas.Left="10" Tag="object"/>
+        <Rectangle x:Name="wall3" Fill="Black" Height="375" Canvas.Left="118" Canvas.Top="386" Width="57" Tag="object"/>
+        <Rectangle x:Name="wall4" Fill="Black" Height="398" Canvas.Left="263" Canvas.Top="501" Width="56" Tag="object"/>
+        <Rectangle x:Name="ground2" Height="52" Width="56" Fill="Black" Canvas.Top="467" Canvas.Left="263" Tag="object"/>
+        <Rectangle x:Name="ground3" Height="35" Width="57" Fill="Black" Canvas.Top="352" Canvas.Left="118" Tag="object"/>
 
     </Canvas>
 </Window>
