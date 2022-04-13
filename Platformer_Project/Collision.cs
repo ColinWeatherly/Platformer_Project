@@ -18,9 +18,6 @@ namespace Platformer_Project
 {
     public interface Collision
     {
-        Rectangle left_collision(Rectangle player);
-        Rectangle right_collision(Rectangle player);
-        Rectangle top_collision(Rectangle player);
-        Rectangle bottom_collision(Rectangle player);
+
     }
 }

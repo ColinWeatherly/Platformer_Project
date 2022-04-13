@@ -16,10 +16,13 @@ using System.Windows;
 
 namespace Platformer_Project
 {
-    class Player
+    public class Player
     {
-        Rectangle PlayerRect;
-        Player(double x, double y, int height, int width)
+        public Rectangle PlayerRect;
+        DispatcherTimer dtClockTime = new DispatcherTimer();
+        bool left;
+        bool right;
+        public Player(double x, double y, int height, int width)
         {
             PlayerRect = new Rectangle();
             PlayerRect.Fill = Brushes.Blue;
@@ -28,17 +31,47 @@ namespace Platformer_Project
             Canvas.SetTop(PlayerRect, y);
             Canvas.SetLeft(PlayerRect, x);
             PlayerRect.AddHandler(UIElement.KeyDownEvent, new KeyEventHandler(keyisdown), true);
+            PlayerRect.AddHandler(UIElement.KeyUpEvent, new KeyEventHandler(keyisup), true);
+
+            dtClockTime.Tick += dtClockTime_Tick;
+            dtClockTime.Interval = TimeSpan.FromMilliseconds(5); //in Hour, Minutes, Second.
+            dtClockTime.Start();
         }
 
         void keyisdown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Left)
             {
-                Canvas.SetLeft(PlayerRect, Canvas.GetLeft(PlayerRect) - 5);
+                left = true;
             }
             if (e.Key == Key.Right)
             {
-                Canvas.SetLeft(PlayerRect, Canvas.GetLeft(PlayerRect) + 5);
+                right = true;
+            }
+        }
+
+        void keyisup(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Left)
+            {
+                left = false;
+            }
+            if (e.Key == Key.Right)
+            {
+                right = false;
+            }
+        }
+
+        private void dtClockTime_Tick(object sender, EventArgs e)
+        {
+            if (left)
+            {
+                Canvas.SetLeft(PlayerRect, Canvas.GetLeft(PlayerRect) - 1);
+            }
+            
+            if (right)
+            {
+                Canvas.SetLeft(PlayerRect, Canvas.GetLeft(PlayerRect) + 1);
             }
         }
     }

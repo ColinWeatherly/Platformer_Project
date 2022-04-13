@@ -16,36 +16,31 @@ using System.Windows;
 
 namespace Platformer_Project
 {
-    class Surface : Collision
+    public class Surface : Collision
     {
         Rectangle Hitbox;
-        Surface(Rectangle rectangle)
+        Player PlayerObject;
+        DispatcherTimer dtClockTime = new DispatcherTimer();
+        public Surface(Rectangle rectangle, Player player)
         {
             Hitbox = rectangle;
+            PlayerObject = player;
+
+            dtClockTime.Tick += dtClockTime_Tick;
+            dtClockTime.Interval = TimeSpan.FromMilliseconds(5); //in Hour, Minutes, Second.
+            dtClockTime.Start();
         }
-        Rectangle Collision.left_collision(Rectangle player)
+        private void dtClockTime_Tick(object sender, EventArgs e)
         {
-            if (Canvas.GetRight(player) == Canvas.GetLeft(Hitbox))
+            if (Canvas.GetRight(PlayerObject.PlayerRect) == Canvas.GetLeft(Hitbox))
             {
-                Canvas.SetLeft(player, Canvas.GetLeft(player) - 1);
+                Canvas.SetLeft(PlayerObject.PlayerRect, Canvas.GetLeft(PlayerObject.PlayerRect) - 1);
             }
-            return player;
-        }
-        Rectangle Collision.right_collision(Rectangle player)
-        {
-            if (Canvas.GetLeft(player) == Canvas.GetRight(Hitbox))
+
+            if (Canvas.GetLeft(PlayerObject.PlayerRect) == Canvas.GetRight(Hitbox))
             {
-                Canvas.SetRight(player, Canvas.GetRight(player) + 1);
+                Canvas.SetRight(PlayerObject.PlayerRect, Canvas.GetRight(PlayerObject.PlayerRect) + 1);
             }
-            return player;
-        }
-        Rectangle Collision.top_collision(Rectangle player)
-        {
-            return player;
-        }
-        Rectangle Collision.bottom_collision(Rectangle player)
-        {
-            return player;
         }
     }
 }
