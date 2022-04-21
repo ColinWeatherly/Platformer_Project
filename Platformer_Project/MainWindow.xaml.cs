@@ -53,7 +53,8 @@ namespace Platformer_Project
 
         Rect groundHitBox2;
         Rect groundHitBox3;
-       
+
+        Rect goalHitBox;
         public MainWindow()
         {
             InitializeComponent();
@@ -173,6 +174,8 @@ namespace Platformer_Project
             groundHitBox2 = new Rect(Canvas.GetLeft(ground2), Canvas.GetTop(ground2), ground2.Width, ground2.Height);
             groundHitBox3 = new Rect(Canvas.GetLeft(ground3), Canvas.GetTop(ground3), ground3.Width, ground3.Height);
 
+            goalHitBox = new Rect(Canvas.GetLeft(goal), Canvas.GetTop(goal), goal.Width, goal.Height);
+
             if (playerHitBox.IntersectsWith(groundHitBox))
             {
                 if (jumping == false)
@@ -268,6 +271,14 @@ namespace Platformer_Project
 
             }
 
+            if (playerHitBox.IntersectsWith(goalHitBox))
+            {
+                Close();
+                Window1 window1 = new Window1();
+                window1.InitializeComponent();
+                window1.ShowDialog();
+            }
+
             /*if (wallBounceRight == true && wallJumpRight == true || wallBounceLeft == true && wallJumpLeft == true)
             {
                 if(wallJumpLeft == true)
@@ -284,6 +295,8 @@ namespace Platformer_Project
                 
             }
             */
+
+
             if (jumping == true && force < 0)
             {
                 jumping = false;
