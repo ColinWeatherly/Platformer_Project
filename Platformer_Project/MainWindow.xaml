@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformer_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="757" Width="1295" Grid.IsSharedSizeScope="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Canvas x:Name="MyCanvas" Focusable="True" Width="1280" Margin="0,0,0,-33" KeyDown="keyisdown" KeyUp="keyisup">
+        <Label Name="Timer" Margin="-1372,221,1372,-221"></Label>
+        <Rectangle Name="Player" Height="49" Width="30" Fill="Blue" Canvas.Top="352" Canvas.Left="276"/>
+        <Rectangle Name="ground" Height="32" Width="1270" Fill="Black" Canvas.Top="692" Canvas.Left="0" Tag="object"/>
+        <Rectangle x:Name="wall" Fill="Black" Height="751" Canvas.Left="1263" Canvas.Top="10" Width="5" Tag="object"/>
+        <Rectangle x:Name="wall2" Fill="Black" Height="751" Canvas.Top="10" Width="4" Canvas.Left="10" Tag="object"/>
+        <Rectangle x:Name="wall3" Fill="Black" Height="375" Canvas.Left="118" Canvas.Top="386" Width="57" Tag="object"/>
+        <Rectangle x:Name="wall4" Fill="Black" Height="398" Canvas.Left="263" Canvas.Top="501" Width="56" Tag="object"/>
+        <Rectangle x:Name="ground2" Height="52" Width="56" Fill="Black" Canvas.Top="467" Canvas.Left="263" Tag="object"/>
+        <Rectangle x:Name="ground3" Height="35" Width="57" Fill="Black" Canvas.Top="352" Canvas.Left="118" Tag="object"/>
+        <Rectangle x:Name="goal" Fill="#FF7979C3" Height="100" Canvas.Left="1015" Stroke="Black" Canvas.Top="587" Width="100"/>
+
+    </Canvas>
 </Window>
