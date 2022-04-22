@@ -15,7 +15,5 @@ namespace Platformer_Project
             window1.InitializeComponent();
             window1.ShowDialog();
         }
-
-
-        }
+     }
 }

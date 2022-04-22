@@ -1,0 +1,46 @@
+﻿<Window x:Class="Platformer_Project.Window5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Platformer_Project"
+        mc:Ignorable="d"
+        Title="Window5" Height="720" Width="1282" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="LevelBG.png"/>
+    </Window.Background>
+    <Canvas>
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="215,92,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="100">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="SpriteV5.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="0,192,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="410">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="L3-1.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="173" Margin="0,516,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="258">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="L3-2.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="691,589,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="583">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="L3-3.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="262" Margin="604,128,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="289">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="L3-4.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="393" Margin="893,128,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="181">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="L3-5.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="10,411,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="100" Fill="#FFA44646"/>
+
+    </Canvas>
+</Window>

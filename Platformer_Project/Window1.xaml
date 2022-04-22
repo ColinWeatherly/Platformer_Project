@@ -5,10 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformer_Project"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Window1" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="258,149,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="434,222,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="StartMenu.png"/>
+        </Grid.Background>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="571,631,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="235,631,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="965,631,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" Loaded="loaded"/>
 
     </Grid>
 </Window>
