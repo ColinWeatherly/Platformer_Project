@@ -10,37 +10,57 @@
         <ImageBrush ImageSource="LevelBG.png"/>
     </Window.Background>
     <Canvas>
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Assets/Levels/LevelBG.png"/>
+        </Canvas.Background>
         <Rectangle HorizontalAlignment="Left" Height="100" Margin="164,478,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="100">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="SpriteV5.png"/>
+                <ImageBrush ImageSource="/Assets/Character/SpriteV5.png"/>
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle HorizontalAlignment="Left" Height="689" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="284">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="L2-1.png"/>
+                <ImageBrush ImageSource="/Assets/Levels/2/L2-1.png"/>
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle HorizontalAlignment="Left" Height="498" Margin="284,191,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="152">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="L2-2.png"/>
+                <ImageBrush ImageSource="/Assets/Levels/2/L2-2.png"/>
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle HorizontalAlignment="Left" Height="563" Margin="738,126,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="148">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="L2-3.png"/>
+                <ImageBrush ImageSource="/Assets/Levels/2/L2-3.png"/>
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle HorizontalAlignment="Left" Height="350" Margin="1060,0,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="212">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="L2-4.png"/>
+                <ImageBrush ImageSource="/Assets/Levels/2/L2-4.png"/>
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle HorizontalAlignment="Left" Height="194" Margin="1117,495,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="155">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="L2-5.png"/>
+                <ImageBrush ImageSource="/Assets/Levels/2/L2-5.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle Fill="#FFA44646" HorizontalAlignment="Left" Height="100" Margin="1162,390,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="100"/>
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1162,390,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="100">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Assets/Levels/Cake.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="24" Canvas.Left="73" Stroke="Black" StrokeThickness="0" Canvas.Top="580" Width="211" Tag="ground"/>
+        <Rectangle Height="23" Canvas.Left="289" Stroke="Black" StrokeThickness="0" Canvas.Top="191" Width="147" Tag="ground"/>
+        <Rectangle Height="23" Canvas.Left="738" Stroke="Black" StrokeThickness="0" Canvas.Top="126" Width="148" Tag="ground"/>
+        <Rectangle Height="23" Canvas.Left="1117" Stroke="Black" StrokeThickness="0" Canvas.Top="495" Width="154" Tag="ground"/>
+        <Rectangle Height="689" Canvas.Left="42" Stroke="Black" StrokeThickness="0" Width="100" Tag="leftWall"/>
+        <Rectangle Height="470" Canvas.Left="380" Stroke="Black" StrokeThickness="0" Canvas.Top="219" Width="56" Tag="leftWall"/>
+        <Rectangle Height="514" Canvas.Left="835" Stroke="Black" StrokeThickness="0" Canvas.Top="175" Width="51" Tag="leftWall"/>
+        <Rectangle Height="460" Canvas.Left="289" Stroke="Black" StrokeThickness="0" Canvas.Top="229" Width="42" Tag="rightWall"/>
+        <Rectangle Height="525" Canvas.Left="738" Stroke="Black" StrokeThickness="0" Canvas.Top="164" Width="39" Tag="rightWall"/>
+        <Rectangle Height="154" Canvas.Left="1117" Stroke="Black" StrokeThickness="0" Canvas.Top="528" Width="49" Tag="rightWall"/>
+        <Rectangle Height="323" Canvas.Left="1060" Stroke="Black" StrokeThickness="0" Width="100" Tag="rightWall"/>
+        <Rectangle Height="22" Canvas.Left="1060" Stroke="Black" StrokeThickness="0" Canvas.Top="328" Width="212" Tag="ceiling"/>
+        <Rectangle Height="14" Canvas.Left="147" Stroke="Black" StrokeThickness="0" Width="913" Tag="ceiling"/>
 
     </Canvas>
 </Window>

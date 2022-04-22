@@ -24,14 +24,6 @@ namespace Platformer_Project
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-            Window1 window1 = new Window1();
-            window1.InitializeComponent();
-            window1.ShowDialog();
-        }
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Close();

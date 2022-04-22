@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -138,70 +139,85 @@
     <None Include="Assets\Music\Level\Neon_Prison.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="StartMenu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="SelectBGv3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L1Button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L2Button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L3Button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="LevelBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L1-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L1-2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L1-3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L1-4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="SpriteV5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L2-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L2-2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L2-3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L2-4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L2-5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L3-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L3-2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L3-3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L3-4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="L3-5.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Assets\Music\Menu\A_City_Without_Sleep.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Start\QuitBTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Start\SelectBTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Start\StartBTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Start\StartMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Select\L1Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Select\L2Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Select\L3Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Select\SelectBGv3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\Cake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\LevelBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\3\L3-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\3\L3-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\3\L3-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\3\L3-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\3\L3-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\2\L2-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\2\L2-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\2\L2-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\2\L2-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\2\L2-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\1\L1-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\1\L1-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\1\L1-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\1\L1-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Character\Dash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Character\SpriteV5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

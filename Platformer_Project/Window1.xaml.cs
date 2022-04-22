@@ -22,11 +22,12 @@ namespace Platformer_Project
         private MediaPlayer mediaPlayer;
         public Window1()
         {
-
+            
     }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            mediaPlayer.Stop();
             Close();
             Window2 window2 = new Window2();
             window2.InitializeComponent();
