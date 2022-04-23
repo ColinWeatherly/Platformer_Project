@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.5)  22 APR 2022 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.28)  22 APR 2022 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./projectSample.tex
 (projectSample.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21> (IEEEtran.cls
+L3 programming layer <2022-02-21> (IEEEtran.cls
 Document Class: IEEEtran 2014/09/17 V1.8a by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -19,7 +19,7 @@ Document Class: IEEEtran 2014/09/17 V1.8a by Michael Shell
 -- Using IEEE Computer Society mode.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 4
 58.
-(E:\MikTex\tex/latex/psnfss\ot1ptm.fd
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 ** ATTENTION: Single column mode is not typically used with IEEE publications.
@@ -116,73 +116,76 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24.09> not available
 \@IEEEtmpitemindent=\dimen160
 \c@IEEEbiography=\count199
 \@IEEEtranrubishbin=\box51
-) (E:\MikTex\tex/latex/hyperref\hyperref.sty
+) (C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
-
-(E:\MikTex\tex/generic/ltxcmds\ltxcmds.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(E:\MikTex\tex/generic/iftex\iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
-(E:\MikTex\tex/generic/pdftexcmds\pdftexcmds.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(E:\MikTex\tex/generic/infwarerr\infwarerr.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(E:\MikTex\tex/latex/graphics\keyval.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(E:\MikTex\tex/generic/kvsetkeys\kvsetkeys.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
+ty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-(E:\MikTex\tex/generic/kvdefinekeys\kvdefinekeys.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(E:\MikTex\tex/generic/pdfescape\pdfescape.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(E:\MikTex\tex/latex/hycolor\hycolor.sty
+) (C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(E:\MikTex\tex/latex/letltxmacro\letltxmacro.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(E:\MikTex\tex/latex/auxhook\auxhook.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(E:\MikTex\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen161
 \Hy@linkcounter=\count266
 \Hy@pagecounter=\count267
-
-(E:\MikTex\tex/latex/hyperref\pd1enc.def
+ (C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(E:\MikTex\tex/latex/hyperref\hyperref-langpatches.def
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref-langp
+atches.def
 File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
 nguages
 )
-(E:\MikTex\tex/generic/intcalc\intcalc.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(E:\MikTex\tex/generic/etexcmds\etexcmds.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count268
-
-(E:\MikTex\tex/latex/hyperref\puenc.def
+ (C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -195,17 +198,19 @@ Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
 \c@Hy@tempcnt=\count269
- (E:\MikTex\tex/latex/url\url.sty
+
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen162
 
-(E:\MikTex\tex/generic/bitset\bitset.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(E:\MikTex\tex/generic/bigintcalc\bigintcalc.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -222,7 +227,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6106.
 LaTeX Info: Redefining \ref on input line 6146.
 LaTeX Info: Redefining \pageref on input line 6150.
 
-(E:\MikTex\tex/latex/base\atbegshi-ltx.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -231,11 +236,10 @@ package with kernel methods
 \c@Hfootnote=\count273
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(E:\MikTex\tex/latex/hyperref\hpdftex.def
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
 
-(E:\MikTex\tex/latex/base\atveryend-ltx.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
@@ -243,10 +247,12 @@ with kernel methods
 \Fld@listcount=\count274
 \c@bookmark@seq@number=\count275
 
-(E:\MikTex\tex/latex/rerunfilecheck\rerunfilecheck.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(E:\MikTex\tex/generic/uniquecounter\uniquecounter.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -254,7 +260,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip50
 )
-(E:\MikTex\tex/latex/enumitem\enumitem.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip51
 \enit@outerparindent=\dimen165
@@ -262,32 +268,36 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box52
 \enit@count@id=\count276
 \enitdp@description=\count277
-) (E:\MikTex\tex/latex/cite\cite.sty
+)
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) (E:\MikTex\tex/latex/graphics\graphicx.sty
+)
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(E:\MikTex\tex/latex/graphics\graphics.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 
-(E:\MikTex\tex/latex/graphics\trig.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(E:\MikTex\tex/latex/graphics-cfg\graphics.cfg
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 
-(E:\MikTex\tex/latex/graphics-def\pdftex.def
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen166
 \Gin@req@width=\dimen167
 )
-(E:\MikTex\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count278
 \l__pdf_internal_box=\box53
 ) (projectSample.aux)
@@ -314,13 +324,14 @@ LaTeX Font Info:    ... okay on input line 142.
 
 -- Lines per column: 58 (exact).
 Package hyperref Info: Link coloring OFF on input line 142.
-(E:\MikTex\tex/latex/hyperref\nameref.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
-(E:\MikTex\tex/latex/refcount\refcount.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(E:\MikTex\tex/generic/gettitlestring\gettitlestring.sty
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count279
@@ -328,12 +339,13 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 142.
 LaTeX Info: Redefining \pageref on input line 142.
 LaTeX Info: Redefining \nameref on input line 142.
- (projectSample.out)
-(projectSample.out)
+ (projectSample.out) (projectSample.out)
 \@outlinefile=\write3
 \openout3 = `projectSample.out'.
 
- (E:\MikTex\tex/context/base/mkii\supp-pdf.mkii
+
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count280
 \scratchdimen=\dimen168
@@ -346,18 +358,20 @@ LaTeX Info: Redefining \nameref on input line 142.
 \MPnumerator=\count284
 \makeMPintoPDFobject=\count285
 \everyMPtoPDFconversion=\toks20
-) (E:\MikTex\tex/latex/epstopdf-pkg\epstopdf-base.sty
+)
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(E:\MikTex\tex/latex/00miktex\epstopdf-sys.cfg
+(C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1
 63.
-
-(E:\MikTex\tex/latex/psnfss\ot1phv.fd
+ (C:\Users\Colin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 20
@@ -368,7 +382,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7.0262> on input line 205.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5.01874> on input line 205.
- [1{C:/Users/pegr5/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+
+[1{C:/Users/Colin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 225.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8.03> on input line 225.
@@ -376,46 +391,44 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5.62097> on input line 225.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <4.015> on input line 225.
-
-
-LaTeX Warning: Reference `Level1 Mockup' on page 2 undefined on input line 246.
-
-
-[2]
-<Level1 Mockup.png, id=101, 462.528pt x 260.172pt>
+ [2]
+<Level1 Mockup.png, id=103, 462.528pt x 260.172pt>
 File: Level1 Mockup.png Graphic file (type png)
 <use Level1 Mockup.png>
 Package pdftex.def Info: Level1 Mockup.png  used on input line 309.
 (pdftex.def)             Requested size: 401.52095pt x 250.94925pt.
-<Start Mockup.png, id=103, 1445.4pt x 813.0375pt>
+<Start Mockup.png, id=105, 1445.4pt x 813.0375pt>
 File: Start Mockup.png Graphic file (type png)
 <use Start Mockup.png>
 Package pdftex.def Info: Start Mockup.png  used on input line 315.
 (pdftex.def)             Requested size: 401.48921pt x 250.93489pt.
-<Select Mockup.png, id=104, 462.528pt x 260.172pt>
+<Select Mockup.png, id=106, 462.528pt x 260.172pt>
 File: Select Mockup.png Graphic file (type png)
 <use Select Mockup.png>
 Package pdftex.def Info: Select Mockup.png  used on input line 321.
 (pdftex.def)             Requested size: 401.52095pt x 250.94925pt.
-<Timeline.jpg, id=106, 240.9pt x 311.0019pt>
+<Timeline.jpg, id=108, 240.9pt x 311.0019pt>
 File: Timeline.jpg Graphic file (type jpg)
 <use Timeline.jpg>
-Package pdftex.def Info: Timeline.jpg  used on input line 331.
+Package pdftex.def Info: Timeline.jpg  used on input line 345.
 (pdftex.def)             Requested size: 301.15364pt x 401.50258pt.
-<Facade.png, id=108, 979.66pt x 725.71124pt>
-File: Facade.png Graphic file (type png)
-<use Facade.png>
-Package pdftex.def Info: Facade.png  used on input line 343.
-(pdftex.def)             Requested size: 401.49878pt x 351.3162pt.
-<cat2.jpg, id=109, 236.885pt x 200.75pt>
+
+[3 <./Level1 Mockup.png>] [4 <./Start Mockup.png> <./Select Mockup.png>]
+<Penultimate_UML.png, id=125, 666.3294pt x 266.6763pt>
+File: Penultimate_UML.png Graphic file (type png)
+<use Penultimate_UML.png>
+Package pdftex.def Info: Penultimate_UML.png  used on input line 368.
+(pdftex.def)             Requested size: 501.88097pt x 250.94025pt.
+<cat2.jpg, id=126, 236.885pt x 200.75pt>
 File: cat2.jpg Graphic file (type jpg)
 <use cat2.jpg>
-Package pdftex.def Info: cat2.jpg  used on input line 349.
+Package pdftex.def Info: cat2.jpg  used on input line 374.
 (pdftex.def)             Requested size: 355.32661pt x 301.12424pt.
- [3 <./Level1 Mockup.png>] [4 <./Start Mockup.png> <./Select Mockup.png>]
-** WARNING: \IEEEbiography is locked out when in conference mode (line 380).
-** WARNING: \IEEEbiographynophoto is locked out when in conference mode (line 3
-85).
+
+[5 <./Timeline.jpg>] [6 <./Penultimate_UML.png> <./cat2.jpg>]
+** WARNING: \IEEEbiography is locked out when in conference mode (line 402).
+** WARNING: \IEEEbiographynophoto is locked out when in conference mode (line 4
+07).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -427,30 +440,26 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5 <./Timeline.jpg>] [6 <./Facade.png>] [7 <./cat2.jpg>] (projectSample.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+[7] (projectSample.aux)
 Package rerunfilecheck Info: File `projectSample.out' has not changed.
 (rerunfilecheck)             Checksum: D1292BFF0D8844DD2CE3E31956FF90EA;1928.
  ) 
 Here is how much of TeX's memory you used:
- 9532 strings out of 478593
- 152961 string characters out of 2861020
- 456850 words of memory out of 3000000
- 27557 multiletter control sequences out of 15000+600000
- 507097 words of font info for 90 fonts, out of 8000000 for 9000
+ 9536 strings out of 478584
+ 156729 string characters out of 2844401
+ 457179 words of memory out of 3000000
+ 27572 multiletter control sequences out of 15000+600000
+ 504277 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,8n,63p,859b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
-{E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb><E:/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type
-1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on projectSample.pdf (7 pages, 408573 bytes).
+{C:/Users/Colin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:
+/Users/Colin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb><C:/Users/Colin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a
+.pfb><C:/Users/Colin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a
+.pfb>
+Output written on projectSample.pdf (7 pages, 575717 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
+ 171 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -327,6 +327,20 @@ Process flow:
 
 \section{Project Timeline}
 Refer to Figure \ref{Timeline}.
+
+The first item is where we propose the idea of a 2D platformer game.
+
+The second item sees us writing up use cases and setting requirements. Concepts are put into place with mockups being created.
+
+The third item is where the project is updated with designs that are more fleshed out and close to final. Initial structure ideas are outlined in a preliminary UML.
+
+The fourth item has movement being more or less completed, with wall and ground collision now being worked on.
+
+The fifth item has collision being finished or nearly finished. Level loading has begun implementation or is approaching implementation.
+
+The sixth item has level loading finished or nearing completion. Menus have begun implementation. Bug testing has begun.
+
+The last item has the project being completed, having met all goals and running with few bugs.
 \begin{figure}[ht!]
 \includegraphics[height=400px, width=300px]{Timeline.jpg}
 \caption{Timeline}
@@ -338,10 +352,21 @@ Refer to Figure \ref{Timeline}.
 From main, the menus will be loaded. From here, StartMenu will contain methods for all of the choices, which will start the game, access the LevelSelect, or close the program. The LevelSelect and StartMenu can both load into the gameplay. Game runs the gameplay. From here, collision is loaded for the stage from a Collision object, which is a child of the Load class, which handles the loading of the correct stage. The Character is also loaded, which contains all of the information of the character, including the character’s position and collision. The movement classes helps with Character movement handling, such as jumping, horizontal movement, and jumping collision.
 
 \subsection{UML Outline}
-Facade: refer to Figure \ref{Facade}.
+Refer to Figure \ref{Facade}.
+
+Title is what the user loads into upon start up. LoadLevelSelect() creates an instance of LevelSelect, and StartGame loads an instance of Level1. CloseGame() simply closes the program.
+
+LevelSelect is where the user can select any of the 3 levels. LoadLevel1() creates an instance of Level1, LoadLevel2() creates an instance of Level2, LoadLevel3() creates an instance of Level3, and GoBack() goes back to Title.
+
+Each of the Level child classes contains a Player object (the object the user controls), a List of Surface objects (the walls/grounds in the stage), and a Goal object. These vary depending on the level.
+The Player object inherits from the RectangleAdapter. It contains a Rectangle, is DispatcherTimer, and booleans for player movement. The object is created with x and y coordinates, which determine where the object spawns on the screen. The keyisdown and keyisup function handles movement when pressing down and releasing the arrow keys or action keys. The dtClockTime\_Tick function refreshes the object's state every few frames.
+
+The Surface object and Goal object are both children of the Collision interface and also inherit from RectangleAdapter. Both contain a hitbox Rectangle, a Player object, and contain a DispatchTimer. Both take a Rectangle and Player object as arguments. The Goal object contains a bool that represents if it is or isn't making contact with the Player object. dtClockTime\_Tick in the Surface class handles collision between it and the player every timer tick. The Goal class checks to see if the Player has made contact with the object. If it has, the bool is set to true.
+
+The RectangleAdapter class adapts a Rectangle into a RectangleAdapter type, which allows Surface, Goal, and Player objects to inherit from it. This is to get around the Rectangle class being a sealed class.
 \begin{figure}[ht!]
-\includegraphics[height=350px, width=400px]{Facade.png}
-\caption{Facade Outline}
+\includegraphics[height=250px, width=500px]{Penultimate_UML.png}
+\caption{UML Outline}
 \label{Facade}
 \end{figure}
 
@@ -353,28 +378,25 @@ Facade: refer to Figure \ref{Facade}.
 
 
 \subsection{Design Patterns Used}
-Make sure to actually use at least 2 design patterns from this class.  This is not normally part of such documentation, but largely just specific to this class -- I want to see you use the patterns!
+The 2 design patterns used are the Strategy pattern and the Adapter pattern.
+
+Strategy: On the level select, a different level is chosen depending on what button the user selects on that screen. Depending on the selection, either of 3 strategies (Levels) can be instantiated: Level1, Level2, or Level3.
+
+Adapter: The adapter pattern is used to adapt a Rectangle into being a RectangleAdapter, which is to get around the fact that Rectangle on its own cannot be inherited from, as it is a sealed class. The Surface, Goal, and Player objects then inherit from RectangleAdapter.
 
 
 \section{Results}
-This section will start out a little vague, but it should grow as your project evolves.  With each deliverable you hand in, give me a final summary of where your project stands.  By the end, this should be a reflective section discussing how many of your original goals you managed to attain/how many desired use cases you implemented/how many extra features you added.
+The project was definitely going to be hard to implement from the very moment we made the initial concept. Making a platformer in a WPF application is certainly not easy or ideal. Regardless, I'm satisfied that we managed to get something together that meets the requirements we established. The project is nearing completion, and it seems we'll have everything we wanted to include at minimum. Looking back, perhaps it wasn't the best idea to create a platformer with a WPF application.
 
 \subsection{Future Work}
-Where are you going next with your project?
-For early deliverables, what are your next steps?  (HINT: you will typically want to look back at your timeline and evaluate: did you meet your expected goals?  Are you ahead of schedule?  Did you decide to shift gears and implement a new feature?)
-By the end, what do you plan on doing with this project?  Will you try to sell it?  Set it on fire?  Link to it on your resume and forget it exists?
+From here, we plan to potentially clean up what we have even further. After all is said and done with this project, we don't have any particular plans to do anything more with this project when it comes to distribution or anything else. We figure this will just remain as a past project.
 
 
 
 
-\begin{thebibliography}{1}
-
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
+\begin{thebibliography}{Captain Ahab}
+\item Wasn't sure how to remove this.
 \end{thebibliography}
-
 
 
 \begin{IEEEbiography}{Michael Shell}
