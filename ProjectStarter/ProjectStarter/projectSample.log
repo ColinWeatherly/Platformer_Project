@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.5)  28 MAR 2022 23:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.5)  22 APR 2022 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -369,48 +369,53 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5.01874> on input line 205.
  [1{C:/Users/pegr5/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 226.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 225.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8.03> on input line 226.
+(Font)              <8.03> on input line 225.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.62097> on input line 226.
+(Font)              <5.62097> on input line 225.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.015> on input line 226.
- [2]
-<Level Mockup.png, id=103, 1445.4pt x 813.0375pt>
-File: Level Mockup.png Graphic file (type png)
-<use Level Mockup.png>
-Package pdftex.def Info: Level Mockup.png  used on input line 302.
-(pdftex.def)             Requested size: 401.48921pt x 250.93489pt.
-<Start Mockup.png, id=104, 1445.4pt x 813.0375pt>
+(Font)              <4.015> on input line 225.
+
+
+LaTeX Warning: Reference `Level1 Mockup' on page 2 undefined on input line 246.
+
+
+[2]
+<Level1 Mockup.png, id=101, 462.528pt x 260.172pt>
+File: Level1 Mockup.png Graphic file (type png)
+<use Level1 Mockup.png>
+Package pdftex.def Info: Level1 Mockup.png  used on input line 309.
+(pdftex.def)             Requested size: 401.52095pt x 250.94925pt.
+<Start Mockup.png, id=103, 1445.4pt x 813.0375pt>
 File: Start Mockup.png Graphic file (type png)
 <use Start Mockup.png>
-Package pdftex.def Info: Start Mockup.png  used on input line 308.
+Package pdftex.def Info: Start Mockup.png  used on input line 315.
 (pdftex.def)             Requested size: 401.48921pt x 250.93489pt.
-<Select Mockup.png, id=105, 1445.4pt x 813.0375pt>
+<Select Mockup.png, id=104, 462.528pt x 260.172pt>
 File: Select Mockup.png Graphic file (type png)
 <use Select Mockup.png>
-Package pdftex.def Info: Select Mockup.png  used on input line 314.
-(pdftex.def)             Requested size: 401.48921pt x 250.93489pt.
-<Timeline.jpg, id=107, 240.9pt x 311.0019pt>
+Package pdftex.def Info: Select Mockup.png  used on input line 321.
+(pdftex.def)             Requested size: 401.52095pt x 250.94925pt.
+<Timeline.jpg, id=106, 240.9pt x 311.0019pt>
 File: Timeline.jpg Graphic file (type jpg)
 <use Timeline.jpg>
-Package pdftex.def Info: Timeline.jpg  used on input line 324.
+Package pdftex.def Info: Timeline.jpg  used on input line 331.
 (pdftex.def)             Requested size: 301.15364pt x 401.50258pt.
-<Facade.png, id=109, 979.66pt x 725.71124pt>
+<Facade.png, id=108, 979.66pt x 725.71124pt>
 File: Facade.png Graphic file (type png)
 <use Facade.png>
-Package pdftex.def Info: Facade.png  used on input line 336.
+Package pdftex.def Info: Facade.png  used on input line 343.
 (pdftex.def)             Requested size: 401.49878pt x 351.3162pt.
-<cat2.jpg, id=110, 236.885pt x 200.75pt>
+<cat2.jpg, id=109, 236.885pt x 200.75pt>
 File: cat2.jpg Graphic file (type jpg)
 <use cat2.jpg>
-Package pdftex.def Info: cat2.jpg  used on input line 342.
+Package pdftex.def Info: cat2.jpg  used on input line 349.
 (pdftex.def)             Requested size: 355.32661pt x 301.12424pt.
- [3 <./Level Mockup.png>] [4 <./Start Mockup.png> <./Select Mockup.png>]
-** WARNING: \IEEEbiography is locked out when in conference mode (line 373).
+ [3 <./Level1 Mockup.png>] [4 <./Start Mockup.png> <./Select Mockup.png>]
+** WARNING: \IEEEbiography is locked out when in conference mode (line 380).
 ** WARNING: \IEEEbiographynophoto is locked out when in conference mode (line 3
-78).
+85).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -423,23 +428,29 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 [5 <./Timeline.jpg>] [6 <./Facade.png>] [7 <./cat2.jpg>] (projectSample.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `projectSample.out' has not changed.
 (rerunfilecheck)             Checksum: D1292BFF0D8844DD2CE3E31956FF90EA;1928.
  ) 
 Here is how much of TeX's memory you used:
- 9531 strings out of 478593
- 152909 string characters out of 2861020
+ 9532 strings out of 478593
+ 152961 string characters out of 2861020
  456850 words of memory out of 3000000
- 27556 multiletter control sequences out of 15000+600000
+ 27557 multiletter control sequences out of 15000+600000
  507097 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,8n,63p,859b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
 {E:/MikTex/fonts/enc/dvips/base/8r.enc}<E:/MikTex/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb><E:/MikTex/fonts/type1/urw/times/utmb8a.pfb><E:/MikTex/fonts/type
 1/urw/times/utmr8a.pfb><E:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on projectSample.pdf (7 pages, 423510 bytes).
+Output written on projectSample.pdf (7 pages, 408573 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
+ 174 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

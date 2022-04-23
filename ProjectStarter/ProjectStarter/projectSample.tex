@@ -202,9 +202,8 @@ This platforming game is considered done once three levels of the game are playa
 
 \subsubsection{Functional}
 \begin{itemize}
-\item Player's completed levels stay completed – user's completed levels persist after the application is exited and started again
 \item User inputs via designated keys are read – the application should register the inputs and move the player character accordingly
-\item Selecting New Game erases the user's save data – completed levels will return to being uncompleted, player is loaded into the first level as if starting the game for the first time
+\item Selecting Start places the user in the first level – Unlike the level select which allows the user to choose a level, pressing the start button will immediately bring them to the first level
 \item Level fails upon contact with a hazard – should the player character run into a hazard(i.e spike), level is failed and character is returned to the starting point of the same level
 \end{itemize}
 
@@ -233,6 +232,7 @@ Use Case ID & Use Case Name & Primary Actor & Complexity & Priority \\
 \hline
 3 & Character Jump & User & Medium & 1\\
 \hline
+4 & Character Dash & User & Medium & 1\\
 
 \end{tabular}
 \caption{Use case table}
@@ -243,14 +243,14 @@ Use Case ID & Use Case Name & Primary Actor & Complexity & Priority \\
 \begin{itemize}
 \item[Use Case Number:] 1
 \item[Use Case Name:] Start New Game
-\item[Description:] The player decides to begin the game from the beginning (Level 1). They will click on the ``New Game" button (see Figure \ref{Start Mockup}). This will load the first level of the game (see Figure \ref{Level Mockup}). NOTE:This is only a conceptualized level meant to show loading into a level, not specifically level 1.
+\item[Description:] The player decides to begin the game from the beginning (Level 1). They will click on the ``Start" button (see Figure \ref{Start Mockup}). This will load the first level of the game (see Figure \ref{Level1 Mockup}).
 \end{itemize}
 
 Process flow:
 
 \begin{enumerate}
 \item Player starts the program, which begins with the main menu loaded.
-\item The player left-clicks the ``New Game" option on the menu.
+\item The player left-clicks the ``Start" option on the menu.
 \item The game state is updated to gameplay, and the first level is loaded.
 \item[Termination Outcome:] Gameplay has begun in level 1.
 \end{enumerate}
@@ -275,33 +275,40 @@ Process flow:
 \begin{itemize}
 \item[Use Case Number:] 3
 \item[Use Case Name:] Character Jump
-\item[Description:] The player is in gameplay. They wish to make the player character jump (in order to avoid hazards such as spikes). The player then hits the space bar. The player character will then leap upward. The character will gradually rise up off the ground for a few seconds, then gradually fall back to the ground.
+\item[Description:] The player is in gameplay. They wish to make the player character jump (in order to avoid hazards such as spikes). The player then hits the 'Z' key. The player character will then leap upward. The character will gradually rise up off the ground for a few seconds, then gradually fall back to the ground.
 \end{itemize}
 
 Process flow:
 
 \begin{enumerate}
 \item Player is in a stage of gameplay.
-\item The player presses the space bar.
+\item The player presses the 'Z' key.
 \item The player character then leaps off the ground into the air.
 \item After a few seconds of gradually rising upward, the player character then gradually falls until hitting the ground.
 \item[Termination Outcome:] The player character has completed a full jump.
 \end{enumerate}
 
-Alternative: Player character is already jumping
+\begin{itemize}
+\item[Use Case Number:] 4
+\item[Use Case Name:] Character Dash
+\item[Description:] The player is in gameplay. They wish to make a character quickly travel horizontally. The player then hits the 'X' key. The player will then gain a burst of speed in the direction they are moving. This can also be used during a jump.
+\end{itemize}
+
+Process flow:
+
 \begin{enumerate}
-\item The player presses the space bar as the player character is in mid-jump.
-\item The player character performs a rotation mid-jump.
-\item Outcome is dependent on whether the player contacts a wall.
-\item[Termination Outcome:] If the player contacts a wall they will be launched away from the wall horizontally. Else, the player will complete a full jump as if they had inputted a normal jump.
+\item Player is in a stage of gameplay.
+\item The player presses the 'X' key.
+\item The player's movement speed is doubled in the direction of movement(left, right) for a second.
+\item[Termination Outcome:] The player has completed a full dash.
 \end{enumerate}
 
 
 \subsection{Interface Mockups}
 \begin{figure}[ht!]
-\includegraphics[height=250px, width=400px]{Level Mockup.png}
-\caption{Mockup of a player loading into a level}
-\label{Level Mockup}
+\includegraphics[height=250px, width=400px]{Level1 Mockup.png}
+\caption{Mockup of a player loading into level 1}
+\label{Level1 Mockup}
 \end{figure}
 
 \begin{figure}[ht!]
