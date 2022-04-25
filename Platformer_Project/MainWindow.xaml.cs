@@ -279,23 +279,6 @@ namespace Platformer_Project
                 window1.ShowDialog();
             }
 
-            /*if (wallBounceRight == true && wallJumpRight == true || wallBounceLeft == true && wallJumpLeft == true)
-            {
-                if(wallJumpLeft == true)
-                {
-                    jumping = false;
-                    Canvas.SetLeft(Player, Canvas.GetLeft(Player) + 20);
-                }
-                if(wallJumpRight == true)
-                {
-                    jumping = false;
-                    Canvas.SetLeft(Player, Canvas.GetLeft(Player) - 20);
-                }
-                
-                
-            }
-            */
-
 
             if (jumping == true && force < 0)
             {

@@ -5,15 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformer_Project"
         mc:Ignorable="d"
-        Title="Window4" Height="720" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <Window.Background>
-        <ImageBrush ImageSource="LevelBG.png"/>
-    </Window.Background>
-    <Canvas>
+        Title="Window4" Height="720" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="loaded">
+    <Canvas x:Name="MyCanvas" Focusable="True" KeyDown="keyisdown" KeyUp="keyisup">
         <Canvas.Background>
             <ImageBrush ImageSource="/Assets/Levels/LevelBG.png"/>
         </Canvas.Background>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="164,478,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="100">
+        <Label Name="Timer" Margin="-1372,221,1372,-221"></Label>
+        <Rectangle Name ="Player" HorizontalAlignment="Left" Height="100" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="100" Canvas.Left="164" Canvas.Top="475">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/Assets/Character/SpriteV5.png"/>
             </Rectangle.Fill>
@@ -28,7 +26,7 @@
                 <ImageBrush ImageSource="/Assets/Levels/2/L2-2.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="563" Margin="738,126,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="148">
+        <Rectangle HorizontalAlignment="Left" Height="508" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="148" Canvas.Left="738" Canvas.Top="181">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/Assets/Levels/2/L2-3.png"/>
             </Rectangle.Fill>
@@ -43,24 +41,26 @@
                 <ImageBrush ImageSource="/Assets/Levels/2/L2-5.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1162,390,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="100">
+        <Rectangle HorizontalAlignment="Left" Height="81" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="81" Tag="goal" Canvas.Left="1166" Canvas.Top="386">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/Assets/Levels/Cake.png"/>
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle Height="24" Canvas.Left="73" Stroke="Black" StrokeThickness="0" Canvas.Top="580" Width="211" Tag="ground"/>
         <Rectangle Height="23" Canvas.Left="289" Stroke="Black" StrokeThickness="0" Canvas.Top="191" Width="147" Tag="ground"/>
-        <Rectangle Height="23" Canvas.Left="738" Stroke="Black" StrokeThickness="0" Canvas.Top="126" Width="148" Tag="ground"/>
+        <Rectangle Height="33" Canvas.Left="738" Stroke="Black" StrokeThickness="0" Canvas.Top="181" Width="148" Tag="ground"/>
         <Rectangle Height="23" Canvas.Left="1117" Stroke="Black" StrokeThickness="0" Canvas.Top="495" Width="154" Tag="ground"/>
-        <Rectangle Height="689" Canvas.Left="42" Stroke="Black" StrokeThickness="0" Width="100" Tag="leftWall"/>
+        <Rectangle Height="679" Canvas.Left="42" Stroke="Black" StrokeThickness="0" Width="100" Tag="leftWall" Canvas.Top="10"/>
         <Rectangle Height="470" Canvas.Left="380" Stroke="Black" StrokeThickness="0" Canvas.Top="219" Width="56" Tag="leftWall"/>
-        <Rectangle Height="514" Canvas.Left="835" Stroke="Black" StrokeThickness="0" Canvas.Top="175" Width="51" Tag="leftWall"/>
+        <Rectangle Height="460" Canvas.Left="835" Stroke="Black" StrokeThickness="0" Canvas.Top="229" Width="51" Tag="leftWall"/>
         <Rectangle Height="460" Canvas.Left="289" Stroke="Black" StrokeThickness="0" Canvas.Top="229" Width="42" Tag="rightWall"/>
-        <Rectangle Height="525" Canvas.Left="738" Stroke="Black" StrokeThickness="0" Canvas.Top="164" Width="39" Tag="rightWall"/>
+        <Rectangle Height="460" Canvas.Left="738" Stroke="Black" StrokeThickness="0" Canvas.Top="229" Width="39" Tag="rightWall"/>
         <Rectangle Height="154" Canvas.Left="1117" Stroke="Black" StrokeThickness="0" Canvas.Top="528" Width="49" Tag="rightWall"/>
-        <Rectangle Height="323" Canvas.Left="1060" Stroke="Black" StrokeThickness="0" Width="100" Tag="rightWall"/>
+        <Rectangle Height="313" Canvas.Left="1060" Stroke="Black" StrokeThickness="0" Width="100" Tag="rightWall" Canvas.Top="10"/>
         <Rectangle Height="22" Canvas.Left="1060" Stroke="Black" StrokeThickness="0" Canvas.Top="328" Width="212" Tag="ceiling"/>
         <Rectangle Height="14" Canvas.Left="147" Stroke="Black" StrokeThickness="0" Width="913" Tag="ceiling"/>
+        <Rectangle Height="4" Stroke="Black" StrokeThickness="0" Width="1270" Tag="ceiling" Canvas.Top="10" Canvas.Left="10"/>
+        <Rectangle Height="55" Canvas.Left="137" Stroke="Black" StrokeThickness="0" Canvas.Top="689" Width="1027" Tag="death"/>
 
     </Canvas>
 </Window>

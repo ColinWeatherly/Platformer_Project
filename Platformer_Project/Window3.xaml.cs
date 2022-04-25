@@ -36,9 +36,12 @@ namespace Platformer_Project
         int slideSpeed = 2;
         int slideForce = 25;
         int slideCharge = 2;
+        double xSpawn;
+        double ySpawn;
         Rect playerHitBox;
 
         DispatcherTimer dtClockTime = new DispatcherTimer();
+        DispatcherTimer slideCharger = new DispatcherTimer();
 
         Class2 mediaPlayer = new Class2();
         public Window3()
@@ -53,11 +56,18 @@ namespace Platformer_Project
             
             dtClockTime.Tick += dtClockTime_Tick;
             dtClockTime.Interval = TimeSpan.FromMilliseconds(5);
+
+            slideCharger.Tick += slideCharger_Tick;
+            slideCharger.Interval = TimeSpan.FromSeconds(2);
+
             dtClockTime.Start();
+            slideCharger.Start();
 
             ImageBrush playerIMG = new ImageBrush();
             playerIMG.ImageSource = new BitmapImage(new Uri(@"../../Assets/Character/SpriteV5.png", UriKind.Relative));
             Player.Fill = playerIMG;
+            xSpawn = Canvas.GetLeft(Player);
+            ySpawn = Canvas.GetTop(Player);
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
@@ -79,6 +89,10 @@ namespace Platformer_Project
                 slide = true;
                 slideForce = 25;
                 slideCharge -= 1;
+                ImageBrush playerIMG = new ImageBrush();
+                playerIMG.ImageSource = new BitmapImage(new Uri(@"../../Assets/Character/Dash1.png", UriKind.Relative));
+                Player.Fill = playerIMG;
+                Player.Height = Player.Height / 2;
             }
             if (e.Key == Key.Z && jumping == false && grounded == true || e.Key == Key.Z && jumping == false && wallJumpRight == true || e.Key == Key.Z && jumping == false && wallJumpLeft == true)
             {
@@ -103,6 +117,14 @@ namespace Platformer_Project
                 case Key.Right:
                     goright = false;
                     break;
+            }
+        }
+
+        private void slideCharger_Tick(object sender, EventArgs e)
+        {
+            if (slideCharge == 0)
+            {
+                slideCharge += 2;
             }
         }
 
@@ -150,6 +172,84 @@ namespace Platformer_Project
                         force = 30;
                     }
                 }
+
+                if((string)x.Tag == "leftWall")
+                {
+                    if (playerHitBox.IntersectsWith(hitBox) && goleft == true)
+                    {
+                        Canvas.SetLeft(Player, Canvas.GetLeft(Player) + 1);
+                        //noleft = true;
+                        goleft = false;
+                        wallJumpLeft = true;
+                        wallJumpRight = false;
+                    }
+                }
+
+                if((string)x.Tag == "rightWall")
+                {
+                    if (playerHitBox.IntersectsWith(hitBox) && goright == true)
+                    {
+                        Canvas.SetLeft(Player, Canvas.GetLeft(Player) + 1);
+                        //noright = true;
+                        goright = false;
+                        wallJumpRight = true;
+                        wallJumpLeft = false;
+                    }
+                }
+
+                if((string)x.Tag == "goal")
+                {
+                    if (playerHitBox.IntersectsWith(hitBox))
+                    {
+                        Close();
+                        Window4 level2 = new Window4();
+                        level2.InitializeComponent();
+                        level2.ShowDialog();
+                    }
+                }
+
+                if((string)x.Tag == "ceiling")
+                {
+                    if (playerHitBox.IntersectsWith(hitBox))
+                    {
+                        force = -1;
+                    }
+                }
+
+                if((string)x.Tag == "death")
+                {
+                    if (playerHitBox.IntersectsWith(hitBox))
+                    {
+                        Canvas.SetLeft(Player, xSpawn);
+                        Canvas.SetTop(Player, ySpawn);
+                    }
+                }
+            }
+
+            if (jumping == true && force < 0)
+            {
+                jumping = false;
+            }
+            if (jumping == true)
+            {
+                jumpSpeed = -8;
+                force -= 1;
+            }
+            else
+            {
+                jumpSpeed = 8;
+            }
+            if (slide == true && slideForce < 0)
+            {
+                slide = false;
+                ImageBrush playerIMG = new ImageBrush();
+                playerIMG.ImageSource = new BitmapImage(new Uri(@"../../Assets/Character/SpriteV5.png", UriKind.Relative));
+                Player.Fill = playerIMG;
+                Player.Height = Player.Height * 2;
+            }
+            if (slide == true)
+            {
+                slideForce -= 2;
             }
         }
     }
