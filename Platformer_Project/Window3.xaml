@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformer_Project"
         mc:Ignorable="d"
-        Title="Window3" Height="720" Width="1280" WindowStartupLocation="CenterScreen" Loaded="loaded">
+        Title="Window3" Height="720" Width="1280" WindowStartupLocation="CenterScreen" Loaded="loaded" ResizeMode="NoResize">
     <Window.Background>
         <ImageBrush ImageSource="/Assets/Levels/LevelBG.png"/>
     </Window.Background>
-    <Canvas>
+    <Canvas x:Name="MyCanvas" Focusable="True" KeyDown="keyisdown" KeyUp="keyisup">
         <Canvas.Background>
             <ImageBrush ImageSource="/Assets/Levels/LevelBG.png"/>
         </Canvas.Background>
+		<Label Name="Timer" Margin="-1372,221,1372,-221"></Label>
         <Rectangle HorizontalAlignment="Left" Height="521" Margin="0,168,0,0" Stroke="Black" VerticalAlignment="Top" Width="139">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/Assets/Levels/1/L1-1.png"/>
@@ -33,7 +34,7 @@
                 <ImageBrush ImageSource="/Assets/Levels/1/L1-4.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="100" Margin="25,68,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" StrokeThickness="0">
+        <Rectangle Name="Player" HorizontalAlignment="Left" Height="100" Margin="25,68,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" StrokeThickness="0" Tag="player">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/Assets/Character/SpriteV5.png"/>
             </Rectangle.Fill>

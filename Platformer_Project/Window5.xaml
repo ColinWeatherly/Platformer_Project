@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformer_Project"
         mc:Ignorable="d"
-        Title="Window5" Height="720" Width="1282" WindowStartupLocation="CenterScreen">
+        Title="Window5" Height="720" Width="1282" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.Background>
         <ImageBrush ImageSource="/Assets/Levels/LevelBG.png"/>
     </Window.Background>

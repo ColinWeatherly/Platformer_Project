@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformer_Project"
         mc:Ignorable="d"
-        Title="Window1" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
+        Title="Window1" Height="720" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/Start/StartMenu.png"/>
