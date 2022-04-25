@@ -200,9 +200,9 @@ namespace Platformer_Project
                     if (playerHitBox.IntersectsWith(hitBox))
                     {
                         Close();
-                        Window1 window1 = new Window1();
-                        window1.InitializeComponent();
-                        window1.ShowDialog();
+                        Window5 level3 = new Window5();
+                        level3.InitializeComponent();
+                        level3.ShowDialog();
                     }
                 }
 
