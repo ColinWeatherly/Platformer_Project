@@ -19,7 +19,7 @@ namespace Platformer_Project
     /// </summary>
     public partial class Window1 : Window
     {
-        private MediaPlayer mediaPlayer;
+        Class2 mediaPlayer = new Class2();
         public Window1()
         {
             
@@ -27,7 +27,7 @@ namespace Platformer_Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            mediaPlayer.Stop();
+            mediaPlayer.menuStop();
             Close();
             Window2 window2 = new Window2();
             window2.InitializeComponent();
@@ -36,7 +36,7 @@ namespace Platformer_Project
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            mediaPlayer.Stop();
+            mediaPlayer.menuStop();
             Close();
             Window3 level1 = new Window3();
             level1.InitializeComponent();
@@ -51,9 +51,7 @@ namespace Platformer_Project
 
         private void loaded(object sender, RoutedEventArgs e)
         {
-            mediaPlayer = new MediaPlayer();
-            mediaPlayer.Open(new Uri(@"../../Assets/Music/Menu/A_City_Without_Sleep.mp3", UriKind.Relative));
-            mediaPlayer.Play();
+            mediaPlayer.musicMenu();
         }
     }
 }

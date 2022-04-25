@@ -19,7 +19,7 @@ namespace Platformer_Project
     /// </summary>
     public partial class Window3 : Window
     {
-        MediaPlayer mediaPlayer = new MediaPlayer();
+        Class2 mediaPlayer = new Class2();
         public Window3()
         {
             InitializeComponent();
@@ -27,9 +27,7 @@ namespace Platformer_Project
 
         private void loaded(object sender, RoutedEventArgs e)
         {
-            mediaPlayer = new MediaPlayer();
-            mediaPlayer.Open(new Uri(@"../../Assets/Music/Level/Neon_Prison.mp3", UriKind.Relative));
-            mediaPlayer.Play();
+            mediaPlayer.musicLevel();
         }
     }
 }
