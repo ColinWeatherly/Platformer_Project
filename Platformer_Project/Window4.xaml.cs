@@ -43,6 +43,8 @@ namespace Platformer_Project
         DispatcherTimer dtClockTime = new DispatcherTimer();
         DispatcherTimer slideCharger = new DispatcherTimer();
 
+        Class2 mediaPlayer = new Class2();
+        ImageBrush playerIMG = new ImageBrush();
         public Window4()
         {
             InitializeComponent();
@@ -50,6 +52,7 @@ namespace Platformer_Project
 
         private void loaded(object sender, RoutedEventArgs e)
         {
+            mediaPlayer.musicLevel();
             MyCanvas.Focus();
 
             dtClockTime.Tick += dtClockTime_Tick;
@@ -61,8 +64,7 @@ namespace Platformer_Project
             dtClockTime.Start();
             slideCharger.Start();
 
-            ImageBrush playerIMG = new ImageBrush();
-            playerIMG.ImageSource = new BitmapImage(new Uri(@"../../Assets/Character/SpriteV5.png", UriKind.Relative));
+            playerIMG.ImageSource = new BitmapImage(new Uri(@"../../Assets/Character/SpriteRight.png", UriKind.Relative));
             Player.Fill = playerIMG;
             xSpawn = Canvas.GetLeft(Player);
             ySpawn = Canvas.GetTop(Player);
@@ -75,12 +77,16 @@ namespace Platformer_Project
                 goleft = true;
                 goright = false;
                 noright = false;
+                playerIMG.ImageSource = new BitmapImage(new Uri(@"../../Assets/Character/SpriteLeft.png", UriKind.Relative));
+                Player.Fill = playerIMG;
             }
             if (e.Key == Key.Right && noright == false)
             {
                 goright = true;
                 goleft = false;
                 noleft = false;
+                playerIMG.ImageSource = new BitmapImage(new Uri(@"../../Assets/Character/SpriteRight.png", UriKind.Relative));
+                Player.Fill = playerIMG;
             }
             if (e.Key == Key.X && noright == false && noleft == false && slideCharge != 0)
             {
@@ -199,6 +205,7 @@ namespace Platformer_Project
                 {
                     if (playerHitBox.IntersectsWith(hitBox))
                     {
+                        mediaPlayer.levelStop();
                         Close();
                         Window5 level3 = new Window5();
                         level3.InitializeComponent();
@@ -230,7 +237,7 @@ namespace Platformer_Project
             }
             if (jumping == true)
             {
-                jumpSpeed = -8;
+                jumpSpeed = -9;
                 force -= 1;
             }
             else
@@ -240,9 +247,18 @@ namespace Platformer_Project
             if (slide == true && slideForce < 0)
             {
                 slide = false;
-                ImageBrush playerIMG = new ImageBrush();
-                playerIMG.ImageSource = new BitmapImage(new Uri(@"../../Assets/Character/SpriteV5.png", UriKind.Relative));
-                Player.Fill = playerIMG;
+                if (goright)
+                {
+                    ImageBrush playerIMG = new ImageBrush();
+                    playerIMG.ImageSource = new BitmapImage(new Uri(@"../../Assets/Character/SpriteRight.png", UriKind.Relative));
+                    Player.Fill = playerIMG;
+                }
+                if (goleft)
+                {
+                    ImageBrush playerIMG = new ImageBrush();
+                    playerIMG.ImageSource = new BitmapImage(new Uri(@"../../Assets/Character/SpriteLeft.png", UriKind.Relative));
+                    Player.Fill = playerIMG;
+                }
                 Player.Height = Player.Height * 2;
             }
             if (slide == true)

@@ -12,9 +12,6 @@
         </Canvas.Background>
         <Label Name="Timer" Margin="-1372,221,1372,-221"></Label>
         <Rectangle Name ="Player" HorizontalAlignment="Left" Height="100" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="100" Canvas.Left="164" Canvas.Top="475">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="/Assets/Character/SpriteV5.png"/>
-            </Rectangle.Fill>
         </Rectangle>
         <Rectangle HorizontalAlignment="Left" Height="689" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="284">
             <Rectangle.Fill>
@@ -58,7 +55,7 @@
         <Rectangle Height="154" Canvas.Left="1117" Stroke="Black" StrokeThickness="0" Canvas.Top="528" Width="49" Tag="rightWall"/>
         <Rectangle Height="313" Canvas.Left="1060" Stroke="Black" StrokeThickness="0" Width="100" Tag="rightWall" Canvas.Top="10"/>
         <Rectangle Height="22" Canvas.Left="1060" Stroke="Black" StrokeThickness="0" Canvas.Top="328" Width="212" Tag="ceiling"/>
-        <Rectangle Height="14" Canvas.Left="147" Stroke="Black" StrokeThickness="0" Width="913" Tag="ceiling"/>
+        <Rectangle Height="4" Canvas.Left="147" Stroke="Black" StrokeThickness="0" Width="913" Tag="ceiling" Canvas.Top="10"/>
         <Rectangle Height="4" Stroke="Black" StrokeThickness="0" Width="1270" Tag="ceiling" Canvas.Top="10" Canvas.Left="10"/>
         <Rectangle Height="55" Canvas.Left="137" Stroke="Black" StrokeThickness="0" Canvas.Top="689" Width="1027" Tag="death"/>
 

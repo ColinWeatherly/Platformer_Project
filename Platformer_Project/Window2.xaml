@@ -13,7 +13,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/Select/SelectBGv3.png"/>
         </Grid.Background>
-        <Button Content="" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Width="364" Height="200" Click="Button_Click_1" BorderThickness="0,0,0,0" SnapsToDevicePixels="True">
+        <Button Content="" HorizontalAlignment="Center" Margin="455,52,455,0" VerticalAlignment="Top" Width="364" Height="189" Click="Button_Click_1" BorderThickness="0,0,0,0" SnapsToDevicePixels="True">
             <Button.Foreground>
                 <ImageBrush ImageSource="/Assets/Select/L1Button.png"/>
             </Button.Foreground>
@@ -29,7 +29,7 @@
                 <ImageBrush ImageSource="/Assets/Select/L2Button.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Center" Margin="0,451,0,0" VerticalAlignment="Top" Width="364" Height="200" Click="Button_Click_3" BorderThickness="0,0,0,0">
+        <Button Content="" HorizontalAlignment="Center" Margin="455,451,455,0" VerticalAlignment="Top" Width="364" Height="176" Click="Button_Click_3" BorderThickness="0,0,0,0">
             <Button.Foreground>
                 <ImageBrush ImageSource="/Assets/Select/L3Button.png"/>
             </Button.Foreground>

@@ -35,9 +35,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle Name="Player" HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="100" StrokeThickness="0" Tag="player" Canvas.Left="25" Canvas.Top="63">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="/Assets/Character/SpriteV5.png"/>
-            </Rectangle.Fill>
+
         </Rectangle>
         <Rectangle HorizontalAlignment="Left" Height="64" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="70" Tag="goal" Canvas.Left="1184" Canvas.Top="80">
             <Rectangle.Fill>
@@ -56,6 +54,8 @@
         <Rectangle Height="14" Canvas.Left="896" Stroke="Black" StrokeThickness="0" Canvas.Top="437" Width="100" Tag="ceiling"/>
         <Rectangle Height="55" Canvas.Left="137" Stroke="Black" StrokeThickness="0" Canvas.Top="689" Width="1027" Tag="death"/>
         <Rectangle Height="4" Stroke="Black" StrokeThickness="0" Width="1270" Tag="ceiling" Canvas.Top="10" Canvas.Left="10"/>
+        <Rectangle Height="542" Canvas.Left="10" Stroke="Black" StrokeThickness="0" Canvas.Top="19" Width="0" Tag="leftWall"/>
+        <Rectangle Height="422" Canvas.Left="1259" Stroke="Black" StrokeThickness="0" Width="5" Tag="rightWall" Canvas.Top="19"/>
 
     </Canvas>
 </Window>
