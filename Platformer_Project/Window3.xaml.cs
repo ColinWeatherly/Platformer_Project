@@ -45,7 +45,7 @@ namespace Platformer_Project
         DispatcherTimer slideCharger = new DispatcherTimer();
         ImageBrush playerIMG = new ImageBrush();
 
-        Class2 mediaPlayer = new Class2();
+        MusicClass mediaPlayer = new MusicClass();
         public Window3()
         {
             InitializeComponent();

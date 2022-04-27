@@ -19,7 +19,7 @@ namespace Platformer_Project
     /// </summary>
     public partial class Window1 : Window
     {
-        Class2 mediaPlayer = new Class2();
+        MusicClass mediaPlayer = new MusicClass();
         public Window1()
         {
             

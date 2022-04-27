@@ -7,7 +7,7 @@ using System.Windows.Threading;
 
 namespace Platformer_Project
 {
-    internal class Class1
+    internal class MainOverride
     {
         [STAThread]
         public static void Main()

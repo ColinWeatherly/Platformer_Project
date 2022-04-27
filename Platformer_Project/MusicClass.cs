@@ -9,7 +9,7 @@ using System.Windows.Media;
 namespace Platformer_Project
 {
     
-    public class Class2
+    public class MusicClass
     {
         private MediaPlayer menuPlayer;
         private MediaPlayer levelPlayer;
@@ -22,6 +22,12 @@ namespace Platformer_Project
         public void menuStop()
         {
             menuPlayer.Stop();
+        }
+
+        private void Media_Ended(object sender, EventArgs e)
+        {
+            menuPlayer.Position = TimeSpan.Zero;
+            menuPlayer.Play();
         }
         public void musicLevel()
         {
