@@ -63,6 +63,8 @@ namespace Platformer_Project
         // closes the game when clicking the quit button
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            // Decorates the Quit button
+            Quit = new QuitDecorator(Quit);
             Close();
         }
 
