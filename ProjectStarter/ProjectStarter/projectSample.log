@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.28)  22 APR 2022 23:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.28)  2 MAY 2022 00:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -375,60 +375,52 @@ LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 20
-5.
+6.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.03749> on input line 205.
+(Font)              <10.03749> on input line 206.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.0262> on input line 205.
+(Font)              <7.0262> on input line 206.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.01874> on input line 205.
+(Font)              <5.01874> on input line 206.
 
 [1{C:/Users/Colin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 225.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 226.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8.03> on input line 225.
+(Font)              <8.03> on input line 226.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.62097> on input line 225.
+(Font)              <5.62097> on input line 226.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.015> on input line 225.
+(Font)              <4.015> on input line 226.
  [2]
-<Level1 Mockup.png, id=103, 462.528pt x 260.172pt>
+<Level1 Mockup.png, id=102, 462.528pt x 260.172pt>
 File: Level1 Mockup.png Graphic file (type png)
 <use Level1 Mockup.png>
-Package pdftex.def Info: Level1 Mockup.png  used on input line 309.
+Package pdftex.def Info: Level1 Mockup.png  used on input line 314.
 (pdftex.def)             Requested size: 401.52095pt x 250.94925pt.
-<Start Mockup.png, id=105, 1445.4pt x 813.0375pt>
+<Start Mockup.png, id=104, 1445.4pt x 813.0375pt>
 File: Start Mockup.png Graphic file (type png)
 <use Start Mockup.png>
-Package pdftex.def Info: Start Mockup.png  used on input line 315.
+Package pdftex.def Info: Start Mockup.png  used on input line 320.
 (pdftex.def)             Requested size: 401.48921pt x 250.93489pt.
-<Select Mockup.png, id=106, 462.528pt x 260.172pt>
+<Select Mockup.png, id=105, 462.528pt x 260.172pt>
 File: Select Mockup.png Graphic file (type png)
 <use Select Mockup.png>
-Package pdftex.def Info: Select Mockup.png  used on input line 321.
+Package pdftex.def Info: Select Mockup.png  used on input line 326.
 (pdftex.def)             Requested size: 401.52095pt x 250.94925pt.
-<Timeline.jpg, id=108, 240.9pt x 311.0019pt>
+<Timeline.jpg, id=107, 240.9pt x 311.0019pt>
 File: Timeline.jpg Graphic file (type jpg)
 <use Timeline.jpg>
-Package pdftex.def Info: Timeline.jpg  used on input line 345.
+Package pdftex.def Info: Timeline.jpg  used on input line 350.
 (pdftex.def)             Requested size: 301.15364pt x 401.50258pt.
 
 [3 <./Level1 Mockup.png>] [4 <./Start Mockup.png> <./Select Mockup.png>]
-<Penultimate_UML.png, id=125, 666.3294pt x 266.6763pt>
-File: Penultimate_UML.png Graphic file (type png)
-<use Penultimate_UML.png>
-Package pdftex.def Info: Penultimate_UML.png  used on input line 368.
-(pdftex.def)             Requested size: 501.88097pt x 250.94025pt.
-<cat2.jpg, id=126, 236.885pt x 200.75pt>
-File: cat2.jpg Graphic file (type jpg)
-<use cat2.jpg>
-Package pdftex.def Info: cat2.jpg  used on input line 374.
-(pdftex.def)             Requested size: 355.32661pt x 301.12424pt.
+[5 <./Timeline.jpg>]
+<elyzium_uml.png, id=128, 5884.98625pt x 2968.08875pt>
+File: elyzium_uml.png Graphic file (type png)
+<use elyzium_uml.png>
+Package pdftex.def Info: elyzium_uml.png  used on input line 373.
+(pdftex.def)             Requested size: 501.78868pt x 250.90288pt.
 
-[5 <./Timeline.jpg>] [6 <./Penultimate_UML.png> <./cat2.jpg>]
-** WARNING: \IEEEbiography is locked out when in conference mode (line 402).
-** WARNING: \IEEEbiographynophoto is locked out when in conference mode (line 4
-07).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -440,15 +432,15 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (projectSample.aux)
+[6 <./elyzium_uml.png>] (projectSample.aux)
 Package rerunfilecheck Info: File `projectSample.out' has not changed.
-(rerunfilecheck)             Checksum: D1292BFF0D8844DD2CE3E31956FF90EA;1928.
+(rerunfilecheck)             Checksum: C5A01364B2FE62A9744479E0B44E1E9C;1833.
  ) 
 Here is how much of TeX's memory you used:
- 9536 strings out of 478584
- 156729 string characters out of 2844401
- 457179 words of memory out of 3000000
- 27572 multiletter control sequences out of 15000+600000
+ 9523 strings out of 478584
+ 156616 string characters out of 2844401
+ 457143 words of memory out of 3000000
+ 27564 multiletter control sequences out of 15000+600000
  504277 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,8n,63p,859b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -457,9 +449,9 @@ Here is how much of TeX's memory you used:
 .pfb><C:/Users/Colin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a
 .pfb><C:/Users/Colin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a
 .pfb>
-Output written on projectSample.pdf (7 pages, 575717 bytes).
+Output written on projectSample.pdf (6 pages, 700994 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
