@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.28)  2 MAY 2022 00:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.28)  3 MAY 2022 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -415,11 +415,11 @@ Package pdftex.def Info: Timeline.jpg  used on input line 350.
 
 [3 <./Level1 Mockup.png>] [4 <./Start Mockup.png> <./Select Mockup.png>]
 [5 <./Timeline.jpg>]
-<elyzium_uml.png, id=128, 5884.98625pt x 2968.08875pt>
+<elyzium_uml.png, id=128, 5884.98625pt x 2552.53625pt>
 File: elyzium_uml.png Graphic file (type png)
 <use elyzium_uml.png>
-Package pdftex.def Info: elyzium_uml.png  used on input line 373.
-(pdftex.def)             Requested size: 501.78868pt x 250.90288pt.
+Package pdftex.def Info: elyzium_uml.png  used on input line 380.
+(pdftex.def)             Requested size: 501.78868pt x 250.90634pt.
 
 
 ** Conference Paper **
@@ -449,7 +449,7 @@ Here is how much of TeX's memory you used:
 .pfb><C:/Users/Colin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a
 .pfb><C:/Users/Colin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a
 .pfb>
-Output written on projectSample.pdf (6 pages, 700994 bytes).
+Output written on projectSample.pdf (6 pages, 691289 bytes).
 PDF statistics:
  160 PDF objects out of 1000 (max. 8388607)
  44 named destinations out of 1000 (max. 500000)

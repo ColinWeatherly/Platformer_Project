@@ -354,21 +354,28 @@ Lastly, April 28th has the project being completed, having met all goals and run
 
 
 \section{Project Structure}
-From main, the menus will be loaded. From here, StartMenu will contain methods for all of the choices, which will start the game, access the LevelSelect, or close the program. The LevelSelect and StartMenu can both load into the gameplay. Game runs the gameplay. From here, collision is loaded for the stage from a Collision object, which is a child of the Load class, which handles the loading of the correct stage. The Character is also loaded, which contains all of the information of the character, including the character’s position and collision. The movement classes helps with Character movement handling, such as jumping, horizontal movement, and jumping collision.
+Our overall approach was to make a game that featured simple menus that can head straight into gameplay or start gameplay at any point in the game.
+
+From main, the menus will be loaded. From here, the Window1 class (Level Select) will contain methods for all of the choices, which will start the game, access the Window2 class (Level Select), or close the program. The Window1 and Window2 classes can both load into the gameplay. Window3, Window4, and Window5 classes (Levels 1, 2, and 3) run the gameplay. These three classes contain the information for the character as well as level data and collision data. The MusicClass also plays music for the game in the background in each screen.
+
+- MusicClass: We decided to make MusicClass a separate class so that it could be easily instantiated in any class and play the required music.
+
+- QuitDecorator: We decided to add this as a small detail when you exit the game. We wanted to have a "Thanks for playing!" message to let the user know we appreciate the time they took to play it.
+
+- Graphical Direction: We decided on a sci-fi style art directions with a neon city in the background and a robotic-looking main character. This mostly came about from graphical experiments, but it ended up sticking.
 
 \subsection{UML Outline}
 Refer to Figure \ref{Facade}.
 
-Title is what the user loads into upon start up. LoadLevelSelect() creates an instance of LevelSelect, and StartGame loads an instance of Level1. CloseGame() simply closes the program.
+Window1 (title screen) is what the user loads into upon start up, as MainOverride creates an instance of Window1. Button\_Click\_1 creates an instance of LevelSelect, which allows users to start from any level in the game, and Button\_Click\_2 loads an instance of Window3 (Level 1). Button\_Click\_3 simply closes the program.
 
-LevelSelect is where the user can select any of the 3 levels. LoadLevel1() creates an instance of Level1, LoadLevel2() creates an instance of Level2, LoadLevel3() creates an instance of Level3, and GoBack() goes back to Title.
+Window is where the user can select any of the 3 levels. Button\_Click\_1 creates an instance of Window3, starting you in the first level. Button\_Click\_2 creates an instance of Window4, starting you in the second level. Lastly, Button\_Click\_3 creates an instance of Window5, starting you in the third level.
 
-Each of the Level child classes contains a Player object (the object the user controls), a List of Surface objects (the walls/grounds in the stage), and a Goal object. These vary depending on the level.
-The Player object inherits from the RectangleAdapter. It contains a Rectangle, is DispatcherTimer, and booleans for player movement. The object is created with x and y coordinates, which determine where the object spawns on the screen. The keyisdown and keyisup function handles movement when pressing down and releasing the arrow keys or action keys. The dtClockTime\_Tick function refreshes the object's state every few frames.
+The MusicClass creates a music player in each of the windows it is instantiated in (Window1, Window3, Window4, Window5). This allows these screens/sections of the game to have music played in the background.
 
-The Surface object and Goal object are both children of the Collision interface and also inherit from RectangleAdapter. Both contain a hitbox Rectangle, a Player object, and contain a DispatchTimer. Both take a Rectangle and Player object as arguments. The Goal object contains a bool that represents if it is or isn't making contact with the Player object. dtClockTime\_Tick in the Surface class handles collision between it and the player every timer tick. The Goal class checks to see if the Player has made contact with the object. If it has, the bool is set to true.
+QuitDecorator is a class that decorates the Button used for quitting out of the program on the title screen. It allows the button to display an extra message when sent, which is "Thanks for playing!"
 
-The RectangleAdapter class adapts a Rectangle into a RectangleAdapter type, which allows Surface, Goal, and Player objects to inherit from it. This is to get around the Rectangle class being a sealed class.
+Each of the 3 level Windows (Window3, Window4, Window5) contain all of the data for that level as well as how the player collides with the level. Upon completing each level, the next is loaded.
 \begin{figure}[ht!]
 \includegraphics[height=250px, width=500px]{elyzium_uml.png}
 \caption{UML Outline}
@@ -386,10 +393,10 @@ Decorator: A QuitDecorator decorates one of the buttons on Window1 (title screen
 
 
 \section{Results}
-The project was definitely going to be hard to implement from the very moment we made the initial concept. Making a platformer in a WPF application is certainly not easy or ideal. Regardless, I'm satisfied that we managed to get something together that meets the requirements we established. The project is nearing completion, and it seems we'll have everything we wanted to include at minimum. Looking back, perhaps it wasn't the best idea to create a platformer with a WPF application.
+While the project was difficult in some places to create, things came together fairly well. We were able to present the project in full on April 28th, and it seemed to have gotten some positive looks from people. In the end, we ended up satisfying all requirements we need and finished the project. The game is fully-functional and can be completed from beginning to end. While we were not able to act on many stretch goals before the presentation on April 28th, we had a good amount to show regardless. A refactor was in the works for certain parts of the project, but was not able to be completed, as work for the main branch was being updated simultaneously, and we weren't able to keep the refactor up-to-date. Due to this, some code in the main branch still remains the slightest bit messy.
 
 \subsection{Future Work}
-From here, we plan to potentially clean up what we have even further. After all is said and done with this project, we don't have any particular plans to do anything more with this project when it comes to distribution or anything else. We figure this will just remain as a past project.
+From here, we plan to potentially clean up what we have even further. After all is said and done with this project, we don't have any particular plans to do anything more with this project when it comes to distribution or anything else. We figure this will just remain as a past project, and will be included in our portfolios. 
 
 
 
