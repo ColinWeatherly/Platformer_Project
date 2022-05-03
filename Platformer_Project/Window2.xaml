@@ -1,0 +1,42 @@
+﻿<Window x:Class="Platformer_Project.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Platformer_Project"
+        mc:Ignorable="d"
+        Title="Window2" Height="720" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/Assets/Select/SelectBGv3.png"/>
+    </Window.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Select/SelectBGv3.png"/>
+        </Grid.Background>
+        <Button Content="" HorizontalAlignment="Center" Margin="455,52,455,0" VerticalAlignment="Top" Width="364" Height="189" Click="Button_Click_1" BorderThickness="0,0,0,0" SnapsToDevicePixels="True">
+            <Button.Foreground>
+                <ImageBrush ImageSource="/Assets/Select/L1Button.png"/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/Select/L1Button.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Center" Margin="0,246,0,0" VerticalAlignment="Top" Width="364" Height="200" Click="Button_Click_2" BorderThickness="0,0,0,0">
+            <Button.Foreground>
+                <ImageBrush ImageSource="/Assets/Select/L2Button.png"/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/Select/L2Button.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Center" Margin="455,451,455,0" VerticalAlignment="Top" Width="364" Height="176" Click="Button_Click_3" BorderThickness="0,0,0,0">
+            <Button.Foreground>
+                <ImageBrush ImageSource="/Assets/Select/L3Button.png"/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/Select/L3Button.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

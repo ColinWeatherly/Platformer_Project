@@ -34,9 +34,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Platformer_Project.MainOverride</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,27 +59,57 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="MainOverride.cs" />
+    <Compile Include="MusicClass.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuitDecorator.cs" />
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window2.xaml.cs">
+      <DependentUpon>Window2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window3.xaml.cs">
+      <DependentUpon>Window3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window4.xaml.cs">
+      <DependentUpon>Window4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window5.xaml.cs">
+      <DependentUpon>Window5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -93,6 +127,93 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Music\Level\Neon_Prison.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Music\Menu\A_City_Without_Sleep.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Start\QuitBTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Start\SelectBTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Start\StartBTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Start\StartMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Select\L1Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Select\L2Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Select\L3Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Select\SelectBGv3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\Cake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\LevelBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\3\L3-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\3\L3-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\3\L3-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\3\L3-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\3\L3-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\2\L2-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\2\L2-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\2\L2-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\2\L2-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\2\L2-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\1\L1-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\1\L1-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\1\L1-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Levels\1\L1-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Character\Dash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Character\SpriteLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Character\SpriteRight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
